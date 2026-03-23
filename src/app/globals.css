@@ -1,5 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --color-remigo-red: #DB3B3B;
+  --color-brand-black: #0C0C0C;
+  --color-brand-white: #F8F8F8;
+  --color-sky-blue: #8ECAFE;
+  --color-amber: #FDB932;
+  --color-burgundy: #392326;
+
+  --font-family-trocchi: 'Trocchi', serif;
+  --font-family-hanken: 'Hanken Grotesk', sans-serif;
+  --font-family-jetbrains: 'JetBrains Mono', monospace;
+  --font-family-roboto: 'Roboto', sans-serif;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #0C0C0C;
+  color: #F8F8F8;
+}
+
+/* Ensure font utilities work correctly */
+.font-trocchi {
+  font-family: 'Trocchi', serif !important;
+}
+
+.font-hanken {
+  font-family: 'Hanken Grotesk', sans-serif !important;
+}
+
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace !important;
 }
