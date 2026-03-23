@@ -1,7 +1,23 @@
-function page() {
-  return (
-    <div>page</div>
-  )
-}
+import {
+  HeroSection,
+  HowItWorksSection,
+  ServiceCardsSection,
+  StatsBarSection,
+  SocialProofSection,
+  FAQSection,
+  FinalCTASection,
+} from '@/components/sections';
 
-export default page
+export default function HomePage() {
+  return (
+    <main>
+      <HeroSection />
+      <HowItWorksSection />
+      <ServiceCardsSection />
+      <StatsBarSection />
+      <SocialProofSection />
+      <FAQSection />
+      <FinalCTASection />
+    </main>
+  );
+}
