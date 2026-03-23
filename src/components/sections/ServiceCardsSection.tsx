@@ -76,7 +76,7 @@ export const ServiceCardsSection: React.FC = () => {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
@@ -88,7 +88,7 @@ export const ServiceCardsSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
           className="text-center mb-16 md:mb-20"
         >
           <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6">
