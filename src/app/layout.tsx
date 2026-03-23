@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: "mortgage broker, remortgage, first-time buyer, self-employed mortgage, mortgage advice, UK mortgages, FCA regulated",
   authors: [{ name: "Remigo" }],
   icons: {
-    icon: "/remigo-only-logo.svg",
+    icon: "/remigo-logo-full.svg",
   },
   openGraph: {
     title: "Remigo - Your Mortgage, Sorted by Mates Who Get It",
