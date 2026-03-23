@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
         <div className="relative hidden lg:block lg:w-[50%] h-screen">
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'ellipse(100% 100% at 100% 50%)' }}>
             <Image
-              src="/hero-women.jpg?v=2"
+              src="/hero-women.jpg"
               alt="Remigo mortgage advisor"
               fill
               className="object-cover"
