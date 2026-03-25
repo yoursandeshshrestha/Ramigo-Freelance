@@ -13,19 +13,19 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen h-[120vh] bg-brand-black overflow-hidden pt-24">
+    <section className="relative min-h-screen h-[120vh] bg-brand-white overflow-hidden pt-24">
       <div className="relative flex flex-col lg:flex-row h-full">
         {/* Left Column - Content (50%) */}
         <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20 lg:py-0 lg:w-[50%]">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-5">
-            <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-gray-400 uppercase border border-gray-700 bg-gray-900/50 px-4 py-2 rounded-full cursor-pointer">
+            <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-brand-black/60 uppercase border border-gray-300 bg-gray-100 px-4 py-2 rounded-full cursor-pointer">
               Whole-of-market · FCA Regulated
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-trocchi text-4xl md:text-5xl lg:text-7xl leading-[1.1] mb-8 tracking-tight text-brand-white">
+          <h1 className="font-trocchi text-4xl md:text-5xl lg:text-7xl leading-[1.1] mb-8 tracking-tight text-brand-black">
             Your mortgage,
             <br />
             <span className="text-remigo-red">sorted by mates</span>
@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
           </h1>
 
           {/* Description */}
-          <p className="font-hanken text-base md:text-lg lg:text-xl text-gray-400 max-w-xl mb-10 leading-relaxed">
+          <p className="font-hanken text-base md:text-lg lg:text-xl text-brand-black/70 max-w-xl mb-10 leading-relaxed">
             Remortgaging, buying your first place, or self-employed and told it&apos;s &quot;complicated&quot;?
             We compare thousands of deals, cut the jargon, and get you the right one. Fast.
           </p>
@@ -50,7 +50,7 @@ export const HeroSection: React.FC = () => {
               Get your free quote
             </Button>
 
-            <p className="font-jetbrains text-xs text-gray-500 uppercase tracking-widest">
+            <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
               60 seconds · No credit check
             </p>
           </div>
@@ -131,12 +131,6 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Wave Divider */}
-      <div className="absolute bottom-0 left-0 w-full h-16 md:h-24">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-full" preserveAspectRatio="none">
-          <path fill="#F8F8F8" fillOpacity="1" d="M0,160L34.3,149.3C68.6,139,137,117,206,117.3C274.3,117,343,139,411,154.7C480,171,549,181,617,165.3C685.7,149,754,107,823,112C891.4,117,960,171,1029,165.3C1097.1,160,1166,96,1234,64C1302.9,32,1371,32,1406,32L1440,32L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-      </div>
     </section>
   );
 };

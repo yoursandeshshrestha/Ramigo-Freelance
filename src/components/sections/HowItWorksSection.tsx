@@ -53,7 +53,7 @@ export const HowItWorksSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-brand-white pt-12 md:pt-16 pb-12 md:pb-16">
+    <section className="relative bg-brand-white py-12 md:py-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">

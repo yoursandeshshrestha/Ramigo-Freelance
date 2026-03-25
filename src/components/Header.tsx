@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-black ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-white border-b border-gray-200 ${
           isScrolled ? 'py-4' : 'py-6'
         } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link href="/" className="cursor-pointer">
               <Image
-                src="/remigo-logo-full.svg"
+                src="/remigo-logo-full-dark.png"
                 alt="Remigo"
                 width={isScrolled ? 120 : 140}
                 height={isScrolled ? 34 : 40}
@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-hanken text-sm text-brand-white hover:text-remigo-red transition-colors cursor-pointer"
+                  className="font-hanken text-sm text-brand-black/70 hover:text-remigo-red transition-colors cursor-pointer"
                 >
                   {link.label}
                 </Link>
@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
             <div className="hidden lg:flex items-center gap-6">
               <a
                 href="tel:+441234567890"
-                className="font-hanken text-sm text-brand-white hover:text-remigo-red transition-colors cursor-pointer"
+                className="font-hanken text-sm text-brand-black/70 hover:text-remigo-red transition-colors cursor-pointer"
               >
                 0123 456 7890
               </a>
@@ -110,17 +110,17 @@ export const Header: React.FC = () => {
               aria-label="Toggle menu"
             >
               <span
-                className={`w-6 h-0.5 bg-brand-white transition-transform ${
+                className={`w-6 h-0.5 bg-brand-black transition-transform ${
                   isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`w-6 h-0.5 bg-brand-white transition-opacity ${
+                className={`w-6 h-0.5 bg-brand-black transition-opacity ${
                   isMobileMenuOpen ? 'opacity-0' : ''
                 }`}
               />
               <span
-                className={`w-6 h-0.5 bg-brand-white transition-transform ${
+                className={`w-6 h-0.5 bg-brand-black transition-transform ${
                   isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -139,13 +139,13 @@ export const Header: React.FC = () => {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-brand-black/80 backdrop-blur-sm"
+          className="absolute inset-0 bg-brand-black/20 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
         {/* Drawer */}
         <div
-          className={`absolute top-0 right-0 bottom-0 w-[280px] bg-brand-black border-l border-gray-800 transition-transform duration-300 ${
+          className={`absolute top-0 right-0 bottom-0 w-[280px] bg-brand-white border-l border-gray-200 transition-transform duration-300 ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
               aria-label="Close menu"
             >
               <svg
-                className="w-6 h-6 text-brand-white"
+                className="w-6 h-6 text-brand-black"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -176,7 +176,7 @@ export const Header: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-hanken text-lg text-brand-white hover:text-remigo-red transition-colors cursor-pointer"
+                  className="font-hanken text-lg text-brand-black hover:text-remigo-red transition-colors cursor-pointer"
                 >
                   {link.label}
                 </Link>
@@ -186,7 +186,7 @@ export const Header: React.FC = () => {
             {/* Mobile Phone */}
             <a
               href="tel:+441234567890"
-              className="font-hanken text-sm text-brand-white hover:text-remigo-red transition-colors mb-6 cursor-pointer"
+              className="font-hanken text-sm text-brand-black/70 hover:text-remigo-red transition-colors mb-6 cursor-pointer"
             >
               📞 0123 456 7890
             </a>
