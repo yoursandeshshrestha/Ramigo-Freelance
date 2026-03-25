@@ -82,19 +82,19 @@ export const ServiceCardsSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-brand-black py-16 md:py-24" ref={ref}>
+    <section className="relative bg-brand-white py-12 md:py-16" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6">
+          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6">
             What can we help you with?
           </h2>
-          <p className="font-hanken text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/70 max-w-2xl mx-auto leading-relaxed">
             Choose your situation and we&apos;ll find you the perfect deal.
           </p>
         </motion.div>
@@ -109,10 +109,10 @@ export const ServiceCardsSection: React.FC = () => {
           {services.map((service, index) => (
             <motion.div key={service.title} variants={cardVariants}>
               <Link href={service.href} className="block h-full cursor-pointer">
-                <div className="group relative bg-linear-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl overflow-hidden h-full flex flex-col">
+                <div className="group relative bg-[#faf5f5] border border-gray-200 rounded-2xl overflow-hidden h-full flex flex-col">
                   {/* Animated gradient overlay on hover */}
                   <motion.div
-                    className="absolute inset-0 bg-linear-to-br from-remigo-red/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 pointer-events-none z-10"
+                    className="absolute inset-0 bg-linear-to-br from-remigo-red/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 pointer-events-none z-10"
                     initial={false}
                     transition={{ duration: 0.4 }}
                   />
@@ -125,12 +125,12 @@ export const ServiceCardsSection: React.FC = () => {
                   {/* Content with padding */}
                   <div className="p-6 flex flex-col grow">
                     {/* Title */}
-                    <h3 className="font-trocchi text-lg md:text-xl text-brand-white mb-3 leading-tight group-hover:text-remigo-red transition-colors duration-300">
+                    <h3 className="font-trocchi text-lg md:text-xl text-brand-black mb-3 leading-tight group-hover:text-remigo-red transition-colors duration-300">
                       {service.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="font-hanken text-sm md:text-base text-gray-400 mb-4 grow leading-relaxed">
+                    <p className="font-hanken text-sm md:text-base text-brand-black/70 mb-4 grow leading-relaxed">
                       {service.description}
                     </p>
 
@@ -154,7 +154,7 @@ export const ServiceCardsSection: React.FC = () => {
                   </div>
 
                   {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-remigo-red/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-remigo-red/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
                 </div>
               </Link>
             </motion.div>

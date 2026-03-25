@@ -34,13 +34,13 @@ const testimonials: Testimonial[] = [
 
 export const SocialProofSection: React.FC = () => {
   return (
-    <section className="relative bg-brand-black py-20 md:py-32">
+    <section className="relative bg-brand-white py-12 md:py-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 whitespace-nowrap">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6 whitespace-nowrap">
             What our clients say
           </h2>
-          <p className="font-hanken text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/70 max-w-2xl mx-auto leading-relaxed">
             Real people, real results. Here&apos;s what our clients have to say about their experience.
           </p>
         </div>
@@ -49,10 +49,10 @@ export const SocialProofSection: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative bg-linear-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 overflow-hidden flex flex-col"
+              className="group relative bg-[#faf5f5] border border-gray-200 rounded-2xl p-8 overflow-hidden flex flex-col"
             >
               {/* Animated gradient overlay on hover */}
-              <div className="absolute inset-0 bg-linear-to-br from-remigo-red/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-400" />
+              <div className="absolute inset-0 bg-linear-to-br from-remigo-red/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-400" />
 
               {/* Rating Stars */}
               <div className="flex gap-1 mb-4 relative z-10">
@@ -68,37 +68,37 @@ export const SocialProofSection: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="font-hanken text-base text-gray-300 mb-6 leading-relaxed relative z-10 grow">
+              <p className="font-hanken text-base text-brand-black/80 mb-6 leading-relaxed relative z-10 grow">
                 &quot;{testimonial.text}&quot;
               </p>
 
               {/* Client Info */}
-              <div className="border-t border-gray-800 pt-4 relative z-10 mt-auto">
-                <p className="font-hanken font-semibold text-brand-white mb-1">
+              <div className="border-t border-gray-200 pt-4 relative z-10 mt-auto">
+                <p className="font-hanken font-semibold text-brand-black mb-1">
                   {testimonial.name}
                 </p>
-                <p className="font-hanken text-sm text-gray-400">
+                <p className="font-hanken text-sm text-brand-black/60">
                   {testimonial.location} · {testimonial.serviceType}
                 </p>
               </div>
 
               {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-remigo-red/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-remigo-red/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
           ))}
         </div>
 
         {/* Trustpilot Widget */}
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <a
             href="https://www.trustpilot.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-linear-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-lg px-6 py-3 hover:border-gray-700 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-6 py-3 hover:border-gray-300 transition-colors cursor-pointer"
           >
             <span className="text-amber text-2xl">★</span>
-            <span className="font-hanken text-gray-300">
-              Rated <span className="font-bold text-brand-white">4.9/5</span> on Trustpilot
+            <span className="font-hanken text-brand-black/70">
+              Rated <span className="font-bold text-brand-black">4.9/5</span> on Trustpilot
             </span>
           </a>
         </div>

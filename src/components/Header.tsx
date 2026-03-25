@@ -8,17 +8,36 @@ import { useFormModal } from './FormModalProvider';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { openForm } = useFormModal();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      const currentScrollY = window.scrollY;
+
+      // Set isScrolled state
+      setIsScrolled(currentScrollY > 100);
+
+      // Determine scroll direction and visibility
+      if (currentScrollY < 10) {
+        // Always show header at the top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide header
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const handleGetQuote = () => {
     openForm();
@@ -37,7 +56,7 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-black ${
           isScrolled ? 'py-4' : 'py-6'
-        }`}
+        } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className={`mx-auto px-6 md:px-12 transition-all duration-300 ${isScrolled ? 'max-w-[1400px]' : 'lg:px-16'}`}>
           <div className="flex items-center justify-between">

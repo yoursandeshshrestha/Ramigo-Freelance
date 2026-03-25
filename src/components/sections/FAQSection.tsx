@@ -50,13 +50,13 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#0A0A0A] py-20 md:py-32">
+    <section className="relative bg-brand-white py-12 md:py-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6">
             Frequently asked questions
           </h2>
-          <p className="font-hanken text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/70 max-w-2xl mx-auto leading-relaxed">
             Got questions? We&apos;ve got answers. Can&apos;t find what you&apos;re looking for? Give us a call.
           </p>
         </div>
@@ -65,18 +65,18 @@ export const FAQSection: React.FC = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-linear-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl overflow-hidden"
+              className="bg-[#faf5f5] border border-gray-200 rounded-2xl overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 text-left flex justify-between items-center cursor-pointer group"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-hanken text-lg font-semibold pr-8 text-brand-white group-hover:text-remigo-red transition-colors duration-300">
+                <span className="font-hanken text-lg font-semibold pr-8 text-brand-black group-hover:text-remigo-red transition-colors duration-300">
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-6 h-6 text-brand-white flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-brand-black shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -97,7 +97,7 @@ export const FAQSection: React.FC = () => {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5 font-hanken text-gray-400 leading-relaxed">
+                <div className="px-6 pb-5 font-hanken text-brand-black/70 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
