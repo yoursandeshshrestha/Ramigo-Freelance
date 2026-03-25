@@ -109,17 +109,17 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-black/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-black/50">
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-brand-black border border-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-2xl bg-brand-white border border-gray-200 rounded-3xl shadow-2xl overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors cursor-pointer z-10"
+          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer z-10"
           aria-label="Close"
         >
           <svg
-            className="w-5 h-5 text-brand-white"
+            className="w-5 h-5 text-brand-black"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -132,7 +132,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
         </button>
 
         {/* Progress Bar */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gray-800">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200">
           <div
             className="h-full bg-remigo-red transition-all duration-300"
             style={{ width: `${(currentStep / totalSteps) * 100}%` }}
@@ -143,7 +143,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
         <div className="p-8 md:p-12 pt-16">
           {/* Step Counter */}
           <div className="mb-6">
-            <p className="font-jetbrains text-xs text-gray-500 uppercase tracking-widest">
+            <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
               Step {currentStep} of {totalSteps}
             </p>
           </div>
@@ -151,7 +151,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
           {/* Step 1: Mortgage Type */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-white mb-8">
+              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-black mb-8">
                 What can we help you with?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -162,13 +162,13 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     className={`p-6 rounded-2xl border-2 transition-all cursor-pointer text-left ${
                       formData.mortgageType === type.value
                         ? 'border-remigo-red bg-remigo-red/10'
-                        : 'border-gray-800 hover:border-gray-700 bg-gray-900/50'
+                        : 'border-gray-200 hover:border-gray-300 bg-[#faf5f5]'
                     }`}
                   >
-                    <div className="font-trocchi text-xl text-brand-white mb-1">
+                    <div className="font-trocchi text-xl text-brand-black mb-1">
                       {type.label}
                     </div>
-                    <div className="font-hanken text-sm text-gray-400">
+                    <div className="font-hanken text-sm text-brand-black/60">
                       {type.subtitle}
                     </div>
                   </button>
@@ -192,11 +192,11 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
             <div className="space-y-6">
               <button
                 onClick={() => setCurrentStep(1)}
-                className="font-hanken text-sm text-gray-400 hover:text-brand-white transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
-              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-white mb-8">
+              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-black mb-8">
                 When are you looking to move forward?
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -207,10 +207,10 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
                       formData.timeline === timeline.value
                         ? 'border-remigo-red bg-remigo-red/10'
-                        : 'border-gray-800 hover:border-gray-700 bg-gray-900/50'
+                        : 'border-gray-200 hover:border-gray-300 bg-[#faf5f5]'
                     }`}
                   >
-                    <div className="font-hanken text-base font-semibold text-brand-white">
+                    <div className="font-hanken text-base font-semibold text-brand-black">
                       {timeline.label}
                     </div>
                   </button>
@@ -224,18 +224,18 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
             <div className="space-y-6">
               <button
                 onClick={() => setCurrentStep(2)}
-                className="font-hanken text-sm text-gray-400 hover:text-brand-white transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
-              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-white mb-4">
+              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-black mb-4">
                 What's the property value?
               </h2>
-              <p className="font-hanken text-sm text-gray-400 mb-8">
+              <p className="font-hanken text-sm text-brand-black/60 mb-8">
                 A rough estimate is fine — we'll confirm the details later
               </p>
               <div className="relative">
-                <span className="absolute left-6 top-1/2 -translate-y-1/2 font-trocchi text-2xl text-gray-400">
+                <span className="absolute left-6 top-1/2 -translate-y-1/2 font-trocchi text-2xl text-brand-black/60">
                   £
                 </span>
                 <input
@@ -243,7 +243,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   value={formData.propertyValue}
                   onChange={handlePropertyValueChange}
                   placeholder="250,000"
-                  className="w-full pl-12 pr-6 py-6 bg-gray-900/50 border-2 border-gray-800 rounded-2xl font-trocchi text-2xl text-brand-white placeholder-gray-600 focus:outline-none focus:border-remigo-red transition-colors"
+                  className="w-full pl-12 pr-6 py-6 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-trocchi text-2xl text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
                 />
               </div>
               <Button
@@ -264,16 +264,16 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               <button
                 type="button"
                 onClick={() => setCurrentStep(3)}
-                className="font-hanken text-sm text-gray-400 hover:text-brand-white transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
-              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-white mb-8">
+              <h2 className="font-trocchi text-3xl md:text-4xl text-brand-black mb-8">
                 How can we reach you?
               </h2>
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="fullName" className="block font-hanken text-sm text-gray-400 mb-2">
+                  <label htmlFor="fullName" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
                     Full name *
                   </label>
                   <input
@@ -282,12 +282,12 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
-                    className="w-full px-6 py-4 bg-gray-900/50 border-2 border-gray-800 rounded-2xl font-hanken text-brand-white placeholder-gray-600 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
                     placeholder="John Smith"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block font-hanken text-sm text-gray-400 mb-2">
+                  <label htmlFor="phone" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
                     Phone number *
                   </label>
                   <input
@@ -296,12 +296,12 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
-                    className="w-full px-6 py-4 bg-gray-900/50 border-2 border-gray-800 rounded-2xl font-hanken text-brand-white placeholder-gray-600 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
                     placeholder="07123 456789"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block font-hanken text-sm text-gray-400 mb-2">
+                  <label htmlFor="email" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
                     Email (optional)
                   </label>
                   <input
@@ -309,7 +309,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-6 py-4 bg-gray-900/50 border-2 border-gray-800 rounded-2xl font-hanken text-brand-white placeholder-gray-600 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -323,7 +323,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               >
                 Get my free quote →
               </Button>
-              <p className="font-jetbrains text-xs text-center text-gray-500 uppercase tracking-widest">
+              <p className="font-jetbrains text-xs text-center text-brand-black/50 uppercase tracking-widest">
                 FCA regulated · £0 fees · We'll call within the hour
               </p>
             </form>
