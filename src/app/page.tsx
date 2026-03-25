@@ -1,12 +1,14 @@
 import {
   HeroSection,
-  HowItWorksSection,
   ServiceCardsSection,
   StatsBarSection,
   SocialProofSection,
+} from '@/features/landingpage';
+import {
+  HowItWorksSection,
   FAQSection,
   FinalCTASection,
-} from '@/components/sections';
+} from '@/features/common';
 
 export default function HomePage() {
   return (
