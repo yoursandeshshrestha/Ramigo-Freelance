@@ -1,5 +1,3 @@
-'use client';
-
 import { BlogPost } from '@/types/blog';
 import { BlogPostCard } from './BlogPostCard';
 
