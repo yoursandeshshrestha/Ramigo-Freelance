@@ -6,6 +6,7 @@ import { GoogleTagManager } from "@/components/GoogleTagManager";
 import { LocalBusinessSchema, WebsiteSchema } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://remigo.co.uk'),
   title: "Remigo - Your Mortgage, Sorted by Mates Who Get It",
   description: "UK mortgage broker offering expert advice on remortgages, first-time buyer mortgages, self-employed mortgages, and protection. FCA regulated. £0 broker fees. Compare 90+ lenders.",
   keywords: "mortgage broker, remortgage, first-time buyer, self-employed mortgage, mortgage advice, UK mortgages, FCA regulated",
