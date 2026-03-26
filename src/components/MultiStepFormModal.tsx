@@ -5,6 +5,7 @@ import { Button } from './ui';
 import { useUTMCapture, getStoredUTMParams } from '@/hooks/useUTMCapture';
 import { getDeviceType } from '@/utils/deviceDetection';
 import { LeadData } from '@/services/hubspot';
+import { trackFormOpen, trackFormStepComplete, trackFormSubmit } from '@/utils/analytics';
 
 interface FormData {
   mortgageType: string;
@@ -42,6 +43,13 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
   useUTMCapture();
 
   const totalSteps = 4;
+
+  // Track form open
+  useEffect(() => {
+    if (isOpen) {
+      trackFormOpen(window.location.pathname, preSelectedType);
+    }
+  }, [isOpen, preSelectedType]);
 
   // Reset form when modal closes
   useEffect(() => {
@@ -83,6 +91,10 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
 
   const handleMortgageTypeSelect = (value: string) => {
     setFormData({ ...formData, mortgageType: value });
+
+    // Track step completion
+    trackFormStepComplete(1, 'mortgage_type', { mortgage_type: value });
+
     if (!preSelectedType) {
       setTimeout(() => setCurrentStep(2), 300);
     }
@@ -90,6 +102,13 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
 
   const handleTimelineSelect = (value: string) => {
     setFormData({ ...formData, timeline: value });
+
+    // Track step completion
+    trackFormStepComplete(2, 'timeline', {
+      mortgage_type: formData.mortgageType,
+      timeline: value
+    });
+
     setTimeout(() => setCurrentStep(3), 300);
   };
 
@@ -140,8 +159,19 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
       const result = await response.json();
 
       if (result.success) {
-        // Success! Redirect to thank you page with name
+        // Success! Track conversion and redirect
         console.log('Lead submitted successfully');
+
+        // Track form submission event
+        trackFormSubmit({
+          mortgageType: formData.mortgageType,
+          timeline: formData.timeline,
+          propertyValue: formData.propertyValue,
+          sourcePage: window.location.pathname,
+          email: formData.email,
+          phone: formData.phone,
+        });
+
         const firstName = formData.fullName.split(' ')[0];
         window.location.href = `/thank-you?name=${encodeURIComponent(firstName)}`;
       } else {
@@ -197,6 +227,16 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
 
   const canContinueStep3 = formData.propertyValue.length > 0;
   const canSubmit = formData.fullName.length > 0 && formData.phone.length > 0;
+
+  const handleStep3Continue = () => {
+    // Track step completion
+    trackFormStepComplete(3, 'property_value', {
+      mortgage_type: formData.mortgageType,
+      timeline: formData.timeline,
+      property_value: formData.propertyValue
+    });
+    setCurrentStep(4);
+  };
 
   if (!isOpen) return null;
 
@@ -353,7 +393,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               <Button
                 variant="primary"
                 size="lg"
-                onClick={() => setCurrentStep(4)}
+                onClick={handleStep3Continue}
                 disabled={!canContinueStep3}
                 className="w-full font-hanken font-semibold"
               >
