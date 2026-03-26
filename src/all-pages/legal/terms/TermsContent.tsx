@@ -1,5 +1,3 @@
-'use client';
-
 export function TermsContent() {
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-32 md:py-40">
