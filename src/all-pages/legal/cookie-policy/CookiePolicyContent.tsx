@@ -137,7 +137,7 @@ export function CookiePolicyContent() {
                 </table>
               </div>
 
-              <p className="mt-4 text-xs text-brand-black/60">
+              <p className="mt-4 text-xs text-brand-black/75">
                 Learn more about Google Analytics cookies: <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank" rel="noopener noreferrer" className="text-remigo-red hover:underline cursor-pointer">Google Analytics Cookie Usage</a>
               </p>
             </div>
@@ -185,7 +185,7 @@ export function CookiePolicyContent() {
                 </table>
               </div>
 
-              <p className="mt-4 text-xs text-brand-black/60">
+              <p className="mt-4 text-xs text-brand-black/75">
                 Learn more: <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer" className="text-remigo-red hover:underline cursor-pointer">Google Cookies</a> · <a href="https://www.facebook.com/policies/cookies" target="_blank" rel="noopener noreferrer" className="text-remigo-red hover:underline cursor-pointer">Meta Cookies</a>
               </p>
             </div>
@@ -345,7 +345,7 @@ export function CookiePolicyContent() {
 
       {/* Footer Note */}
       <div className="mt-16 pt-8 border-t border-brand-black/10">
-        <p className="font-hanken text-sm text-brand-black/60 text-center">
+        <p className="font-hanken text-sm text-brand-black/75 text-center">
           This cookie policy was last updated on March 2026.
         </p>
       </div>

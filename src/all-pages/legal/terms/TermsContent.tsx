@@ -285,7 +285,7 @@ export function TermsContent() {
 
       {/* Footer Note */}
       <div className="mt-16 pt-8 border-t border-brand-black/10">
-        <p className="font-hanken text-sm text-brand-black/60 text-center">
+        <p className="font-hanken text-sm text-brand-black/75 text-center">
           These terms of use were last updated on March 2026 and apply to the use of the Remigo website.
         </p>
       </div>

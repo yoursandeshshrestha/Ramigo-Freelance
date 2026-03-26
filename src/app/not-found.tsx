@@ -58,7 +58,7 @@ export default function NotFound() {
 
         {/* Popular Links */}
         <div className="pt-8 border-t border-gray-200 max-w-lg mx-auto">
-          <p className="font-hanken text-sm text-brand-black/60 mb-4">
+          <p className="font-hanken text-sm text-brand-black/75 mb-4">
             Popular pages:
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
@@ -101,7 +101,7 @@ export default function NotFound() {
 
         {/* Contact Info */}
         <div className="mt-12 pt-8 border-t border-gray-200 max-w-lg mx-auto">
-          <p className="font-hanken text-sm text-brand-black/60 mb-4">
+          <p className="font-hanken text-sm text-brand-black/75 mb-4">
             Need help? Get in touch:
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

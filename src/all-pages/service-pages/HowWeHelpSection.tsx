@@ -45,7 +45,7 @@ export const HowWeHelpSection: React.FC<HowWeHelpSectionProps> = ({ points }) =>
             <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6 leading-tight">
               How we help
             </h2>
-            <p className="font-hanken text-lg text-brand-black/60 leading-relaxed">
+            <p className="font-hanken text-lg text-brand-black/75 leading-relaxed">
               We make the complex simple and the stressful stress-free
             </p>
           </div>

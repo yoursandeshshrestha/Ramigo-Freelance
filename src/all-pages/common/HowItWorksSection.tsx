@@ -57,7 +57,7 @@ export const HowItWorksSection: React.FC = () => {
             <React.Fragment key={step.number}>
               <div className="bg-gray-100 rounded-3xl p-8 flex flex-col h-full">
                 {/* Step Label */}
-                <p className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase mb-4">
+                <p className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase mb-4">
                   {stepLabels[index]}
                 </p>
 
@@ -99,7 +99,7 @@ export const HowItWorksSection: React.FC = () => {
           >
             Get started now →
           </Button>
-          <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest mt-6">
+          <p className="font-jetbrains text-xs text-brand-black/75 uppercase tracking-widest mt-6">
             Takes 60 seconds · No credit check required
           </p>
         </div>

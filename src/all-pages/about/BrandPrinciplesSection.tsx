@@ -6,7 +6,7 @@ export function BrandPrinciplesSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Label with decorative corners */}
         <div className="mb-6 inline-block relative">
-          <span className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase">
+          <span className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase">
           The Foundation of Everything
           </span>
           <div className="absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 border-brand-black/20" />

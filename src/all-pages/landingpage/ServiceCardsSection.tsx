@@ -52,7 +52,7 @@ export const ServiceCardsSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center text-brand-black/60 group-hover:text-remigo-red font-hanken text-sm transition-colors duration-300">
+                <div className="flex items-center text-brand-black/75 group-hover:text-remigo-red font-hanken text-sm transition-colors duration-300">
                   Learn more
                   <svg
                     className="w-4 h-4 ml-2"
@@ -75,7 +75,7 @@ export const ServiceCardsSection: React.FC = () => {
           {/* Right - Heading */}
           <div className="flex flex-col justify-center">
             <div className="mb-6">
-              <span className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase">
+              <span className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase">
                 Our Services
               </span>
             </div>

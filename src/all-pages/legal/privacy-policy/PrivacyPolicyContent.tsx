@@ -122,7 +122,7 @@ export function PrivacyPolicyContent() {
                 <p>
                   We process your data to assess your circumstances, search for suitable mortgage and protection products, make recommendations, submit applications to lenders, and manage your case through to completion.
                 </p>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   <strong>Legal basis:</strong> Contract performance (providing the services you&apos;ve requested) and legitimate interests (delivering effective mortgage advice).
                 </p>
               </div>
@@ -134,7 +134,7 @@ export function PrivacyPolicyContent() {
                 <p>
                   As an FCA-regulated firm, we must keep records of our advice, conduct suitability assessments, prevent money laundering, and maintain compliance with mortgage regulations.
                 </p>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   <strong>Legal basis:</strong> Legal obligation (FCA regulations, anti-money laundering laws, mortgage regulation).
                 </p>
               </div>
@@ -146,7 +146,7 @@ export function PrivacyPolicyContent() {
                 <p>
                   We use your contact details to respond to enquiries, provide updates on your application, send appointment reminders, and provide post-sale service.
                 </p>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   <strong>Legal basis:</strong> Contract performance and legitimate interests (maintaining client relationships).
                 </p>
               </div>
@@ -158,7 +158,7 @@ export function PrivacyPolicyContent() {
                 <p>
                   With your consent, we may send you marketing communications about our services, market updates, remortgage reminders, and protection reviews. You can opt out at any time.
                 </p>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   <strong>Legal basis:</strong> Consent (which you can withdraw at any time).
                 </p>
               </div>
@@ -170,7 +170,7 @@ export function PrivacyPolicyContent() {
                 <p>
                   We analyse website usage data to understand how visitors interact with our site, improve user experience, test new features, and measure the effectiveness of our marketing campaigns.
                 </p>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   <strong>Legal basis:</strong> Legitimate interests (improving our services) and consent (for cookies).
                 </p>
               </div>
@@ -462,7 +462,7 @@ export function PrivacyPolicyContent() {
 
       {/* Footer Note */}
       <div className="mt-16 pt-8 border-t border-brand-black/10">
-        <p className="font-hanken text-sm text-brand-black/60 text-center">
+        <p className="font-hanken text-sm text-brand-black/75 text-center">
           This privacy policy was last updated on March 2026 and applies to UK residents.
         </p>
       </div>

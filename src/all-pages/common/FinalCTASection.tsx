@@ -49,7 +49,7 @@ export const FinalCTASection: React.FC = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-[10px] md:text-xs text-brand-black/50 font-jetbrains uppercase tracking-widest">
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-xs md:text-sm text-brand-black/70 font-jetbrains uppercase tracking-widest">
             <span>✓ FCA Regulated</span>
             <span>✓ 90+ Lenders</span>
             <span>✓ £0 Fees</span>

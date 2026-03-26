@@ -287,7 +287,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
         <div className="relative p-8 md:p-12 pt-16">
           {/* Step Counter */}
           <div className="mb-6">
-            <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
+            <p className="font-jetbrains text-xs text-brand-black/75 uppercase tracking-widest">
               Step {currentStep} of {totalSteps}
             </p>
           </div>
@@ -312,7 +312,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     <div className="font-trocchi text-xl text-brand-black mb-1">
                       {type.label}
                     </div>
-                    <div className="font-hanken text-sm text-brand-black/60">
+                    <div className="font-hanken text-sm text-brand-black/75">
                       {type.subtitle}
                     </div>
                   </button>
@@ -336,7 +336,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
             <div className="space-y-6">
               <button
                 onClick={() => setCurrentStep(1)}
-                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/75 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
@@ -368,18 +368,18 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
             <div className="space-y-6">
               <button
                 onClick={() => setCurrentStep(2)}
-                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/75 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
               <h2 className="font-trocchi text-3xl md:text-4xl text-brand-black mb-4">
                 What's the property value?
               </h2>
-              <p className="font-hanken text-sm text-brand-black/60 mb-8">
+              <p className="font-hanken text-sm text-brand-black/75 mb-8">
                 A rough estimate is fine — we'll confirm the details later
               </p>
               <div className="relative">
-                <span className="absolute left-6 top-1/2 -translate-y-1/2 font-trocchi text-2xl text-brand-black/60">
+                <span className="absolute left-6 top-1/2 -translate-y-1/2 font-trocchi text-2xl text-brand-black/75">
                   £
                 </span>
                 <input
@@ -408,7 +408,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               <button
                 type="button"
                 onClick={() => setCurrentStep(3)}
-                className="font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors mb-4 cursor-pointer"
+                className="font-hanken text-sm text-brand-black/75 hover:text-brand-black transition-colors mb-4 cursor-pointer"
               >
                 ← Back
               </button>
@@ -417,7 +417,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               </h2>
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="fullName" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
+                  <label htmlFor="fullName" className="block font-hanken text-sm text-brand-black/75 mb-2 cursor-pointer">
                     Full name *
                   </label>
                   <input
@@ -431,7 +431,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
+                  <label htmlFor="phone" className="block font-hanken text-sm text-brand-black/75 mb-2 cursor-pointer">
                     Phone number *
                   </label>
                   <input
@@ -445,7 +445,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block font-hanken text-sm text-brand-black/60 mb-2 cursor-pointer">
+                  <label htmlFor="email" className="block font-hanken text-sm text-brand-black/75 mb-2 cursor-pointer">
                     Email (optional)
                   </label>
                   <input
@@ -474,7 +474,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
               >
                 {isSubmitting ? 'Submitting...' : 'Get my free quote →'}
               </Button>
-              <p className="font-jetbrains text-xs text-center text-brand-black/50 uppercase tracking-widest">
+              <p className="font-jetbrains text-xs text-center text-brand-black/70 uppercase tracking-widest">
                 FCA regulated · £0 fees · We'll call within the hour
               </p>
             </form>

@@ -35,7 +35,7 @@ export const SocialProofSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* Label */}
         <div className="mb-6">
-          <span className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase">
+          <span className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase">
             Thousands trust Remigo
           </span>
         </div>
@@ -46,7 +46,7 @@ export const SocialProofSection: React.FC = () => {
             <span className="text-brand-black block">Don&apos;t take our word for it,</span>
             <span className="text-[#d83b3b]">see what our clients say</span>
           </h2>
-          <p className="font-hanken text-lg text-brand-black/60 leading-relaxed">
+          <p className="font-hanken text-lg text-brand-black/75 leading-relaxed">
             We&apos;re honored by the feedback, and it fuels our commitment to delivering exceptional mortgage services. Read the reviews to hear firsthand how Remigo is making a positive impact on people&apos;s lives. Your trust is our greatest achievement.
           </p>
         </div>
@@ -69,7 +69,7 @@ export const SocialProofSection: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="font-hanken text-base text-brand-black/80 mb-8 leading-relaxed grow">
+              <p className="font-hanken text-base text-brand-black/90 mb-8 leading-relaxed grow">
                 {testimonial.text}
               </p>
 
@@ -78,7 +78,7 @@ export const SocialProofSection: React.FC = () => {
                 <p className="font-hanken font-semibold text-brand-black mb-1">
                   {testimonial.name}
                 </p>
-                <p className="font-hanken text-sm text-brand-black/50">
+                <p className="font-hanken text-sm text-brand-black/70">
                   {testimonial.date}
                 </p>
               </div>
@@ -105,7 +105,7 @@ export const SocialProofSection: React.FC = () => {
 
         {/* Rating Text */}
         <div className="mt-4">
-          <p className="font-hanken text-sm text-brand-black/60">
+          <p className="font-hanken text-sm text-brand-black/75">
             4.9 Rating based on 7,772 reviews
           </p>
         </div>

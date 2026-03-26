@@ -20,7 +20,7 @@ export function ContactInfoSection() {
             >
               [Phone Number]
             </a>
-            <p className="font-hanken text-sm text-brand-black/50 mt-2">
+            <p className="font-hanken text-sm text-brand-black/70 mt-2">
               Click to call on mobile
             </p>
           </div>
@@ -41,7 +41,7 @@ export function ContactInfoSection() {
             >
               [Email Address]
             </a>
-            <p className="font-hanken text-sm text-brand-black/50 mt-2">
+            <p className="font-hanken text-sm text-brand-black/70 mt-2">
               We&apos;ll reply within 24 hours
             </p>
           </div>

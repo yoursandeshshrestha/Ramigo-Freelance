@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export const QuestionnaireIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Form header */}
-    <div className="text-[8px] text-brand-black/60 font-medium mb-3">QUICK QUESTIONS</div>
+    <div className="text-[8px] text-brand-black/75 font-medium mb-3">QUICK QUESTIONS</div>
 
     <div className="space-y-2.5">
       {/* Question 1 - Radio buttons */}
@@ -36,7 +36,7 @@ export const QuestionnaireIcon = () => (
                   />
                 )}
               </div>
-              <span className="text-[8px] text-brand-black/60">{option}</span>
+              <span className="text-[8px] text-brand-black/75">{option}</span>
             </motion.div>
           ))}
         </div>
@@ -49,7 +49,7 @@ export const QuestionnaireIcon = () => (
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.2, repeat: Infinity, repeatDelay: 4 }}
       >
-        <span className="text-[8px] text-brand-black/60">Question 1 of 5</span>
+        <span className="text-[8px] text-brand-black/75">Question 1 of 5</span>
         <div className="flex gap-1">
           {[0, 1, 2, 3, 4].map((i) => (
             <motion.div
@@ -70,7 +70,7 @@ export const ComparisonIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Search header */}
     <div className="flex items-center gap-2 mb-3">
-      <div className="text-[8px] text-brand-black/60 font-medium">SEARCHING 90+ LENDERS</div>
+      <div className="text-[8px] text-brand-black/75 font-medium">SEARCHING 90+ LENDERS</div>
       <motion.div
         className="flex gap-0.5"
         initial={{ opacity: 0.3 }}
@@ -111,7 +111,7 @@ export const ComparisonIcon = () => (
             <span className="text-[9px] text-brand-black/70 font-medium">{lender.name}</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className={`text-[11px] font-bold ${lender.best ? 'text-brand-black' : 'text-brand-black/50'}`}>
+            <span className={`text-[11px] font-bold ${lender.best ? 'text-brand-black' : 'text-brand-black/70'}`}>
               {lender.rate}
             </span>
             {lender.best && (
@@ -134,7 +134,7 @@ export const ComparisonIcon = () => (
 export const CallNotificationIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Notification header */}
-    <div className="text-[8px] text-brand-black/60 font-medium mb-3">EXPERT RESPONSE</div>
+    <div className="text-[8px] text-brand-black/75 font-medium mb-3">EXPERT RESPONSE</div>
 
     {/* Incoming call card */}
     <motion.div
@@ -165,7 +165,7 @@ export const CallNotificationIcon = () => (
         </motion.div>
         <div>
           <div className="text-[9px] text-brand-black font-medium">Sarah - Mortgage Expert</div>
-          <div className="text-[8px] text-brand-black/50">Calling you now...</div>
+          <div className="text-[8px] text-brand-black/70">Calling you now...</div>
         </div>
       </div>
 
@@ -192,7 +192,7 @@ export const CallNotificationIcon = () => (
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 1.5, repeat: Infinity, repeatDelay: 4 }}
     >
-      <span className="text-[8px] text-brand-black/50">Avg. response time</span>
+      <span className="text-[8px] text-brand-black/70">Avg. response time</span>
       <span className="text-[9px] text-brand-black font-medium">&lt; 1 hour</span>
     </motion.div>
   </div>
@@ -201,7 +201,7 @@ export const CallNotificationIcon = () => (
 export const ProgressTrackerIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Progress header */}
-    <div className="text-[8px] text-brand-black/60 font-medium mb-3">YOUR PROGRESS</div>
+    <div className="text-[8px] text-brand-black/75 font-medium mb-3">YOUR PROGRESS</div>
 
     <div className="space-y-2.5">
       {/* Progress steps */}
@@ -270,7 +270,7 @@ export const ProgressTrackerIcon = () => (
       transition={{ duration: 0.4, delay: 1.4, repeat: Infinity, repeatDelay: 4 }}
     >
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-[8px] text-brand-black/60">Overall progress</span>
+        <span className="text-[8px] text-brand-black/75">Overall progress</span>
         <span className="text-[9px] text-brand-black font-medium">75%</span>
       </div>
       <div className="h-1 bg-gray-200 rounded-full overflow-hidden">

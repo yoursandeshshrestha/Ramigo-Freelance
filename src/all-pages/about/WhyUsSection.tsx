@@ -25,7 +25,7 @@ export function WhyUsSection() {
             <span className="text-brand-black">Why work </span>
             <span className="text-remigo-red">with us?</span>
           </h2>
-          <p className="font-hanken text-lg md:text-xl text-brand-black/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/75 max-w-2xl mx-auto leading-relaxed">
             Find out why Remigo is better than comparison sites and traditional brokers.
           </p>
         </div>
@@ -40,7 +40,7 @@ export function WhyUsSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </div>
-              <h3 className="font-trocchi text-2xl md:text-3xl text-brand-black/60">
+              <h3 className="font-trocchi text-2xl md:text-3xl text-brand-black/75">
                 Other Services
               </h3>
             </div>

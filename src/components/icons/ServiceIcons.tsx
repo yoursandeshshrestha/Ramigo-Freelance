@@ -20,8 +20,8 @@ export const RemortgageIcon = () => (
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2, repeat: Infinity, repeatDelay: 4 }}
       >
-        <div className="text-[9px] text-brand-black/50 font-medium">Current Rate</div>
-        <div className="text-sm font-bold text-brand-black/60">5.49%</div>
+        <div className="text-[9px] text-brand-black/70 font-medium">Current Rate</div>
+        <div className="text-sm font-bold text-brand-black/75">5.49%</div>
       </motion.div>
 
       <motion.div
@@ -62,7 +62,7 @@ export const FirstTimeBuyerIcon = () => (
         <div className="w-1 h-1 rounded-full bg-gray-300" />
         <div className="w-1 h-1 rounded-full bg-gray-300" />
       </div>
-      <div className="text-[8px] text-brand-black/60 font-medium">PROPERTY</div>
+      <div className="text-[8px] text-brand-black/75 font-medium">PROPERTY</div>
     </div>
 
     {/* Property card */}
@@ -123,7 +123,7 @@ export const FirstTimeBuyerIcon = () => (
 export const SelfEmployedIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Document upload interface */}
-    <div className="text-[8px] text-brand-black/60 font-medium mb-3">DOCUMENTS</div>
+    <div className="text-[8px] text-brand-black/75 font-medium mb-3">DOCUMENTS</div>
 
     <div className="space-y-2">
       {['SA302 Tax Return', 'Company Accounts', 'Bank Statements'].map((doc, i) => (
@@ -162,7 +162,7 @@ export const SelfEmployedIcon = () => (
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.2, repeat: Infinity, repeatDelay: 4 }}
     >
-      <span className="text-[8px] text-brand-black/60">Verification Status</span>
+      <span className="text-[8px] text-brand-black/75">Verification Status</span>
       <span className="text-[9px] text-green-600 font-medium">Complete</span>
     </motion.div>
   </div>
@@ -171,7 +171,7 @@ export const SelfEmployedIcon = () => (
 export const ProtectionIcon = () => (
   <div className="w-full aspect-4/3 bg-brand-white rounded-xl border border-gray-200 p-4 overflow-hidden relative">
     {/* Settings interface */}
-    <div className="text-[8px] text-brand-black/60 font-medium mb-3">COVERAGE OPTIONS</div>
+    <div className="text-[8px] text-brand-black/75 font-medium mb-3">COVERAGE OPTIONS</div>
 
     <div className="space-y-2.5">
       {/* Life Cover - Active */}
@@ -215,7 +215,7 @@ export const ProtectionIcon = () => (
         transition={{ duration: 0.4, delay: 1, repeat: Infinity, repeatDelay: 4 }}
       >
         <div className="flex items-center justify-between">
-          <span className="text-[9px] text-brand-black/50 font-medium">Critical Illness</span>
+          <span className="text-[9px] text-brand-black/70 font-medium">Critical Illness</span>
           <div className="w-8 h-4 bg-gray-200 rounded-full border border-gray-300 flex items-center">
             <div className="w-3 h-3 bg-gray-300 rounded-full ml-0.5" />
           </div>
@@ -229,7 +229,7 @@ export const ProtectionIcon = () => (
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.3, repeat: Infinity, repeatDelay: 4 }}
       >
-        <span className="text-[8px] text-brand-black/60">Monthly Premium</span>
+        <span className="text-[8px] text-brand-black/75">Monthly Premium</span>
         <span className="text-[11px] font-bold text-brand-black">£45/mo</span>
       </motion.div>
     </div>

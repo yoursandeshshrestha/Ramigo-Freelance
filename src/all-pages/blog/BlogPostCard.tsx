@@ -37,7 +37,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       {/* Content */}
       <div className="p-6">
         {/* Meta Info */}
-        <div className="flex items-center gap-3 text-xs text-brand-black/50 font-hanken mb-3">
+        <div className="flex items-center gap-3 text-xs text-brand-black/70 font-hanken mb-3">
           <span>{formattedDate}</span>
           <span>•</span>
           <span>{post.readTime}</span>

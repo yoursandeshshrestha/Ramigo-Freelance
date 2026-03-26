@@ -46,7 +46,7 @@ export function BlogListingSection({ posts, categories }: BlogListingSectionProp
 
         {/* Posts Count */}
         <div className="mb-8">
-          <p className="font-hanken text-sm text-brand-black/60">
+          <p className="font-hanken text-sm text-brand-black/75">
             {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'}
             {selectedCategory && ` in ${selectedCategory}`}
           </p>
@@ -61,7 +61,7 @@ export function BlogListingSection({ posts, categories }: BlogListingSectionProp
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="font-hanken text-lg text-brand-black/60">
+            <p className="font-hanken text-lg text-brand-black/75">
               No articles found in this category yet.
             </p>
           </div>

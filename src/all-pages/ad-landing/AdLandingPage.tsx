@@ -85,7 +85,7 @@ export function AdLandingPage({
               </Button>
             </div>
 
-            <p className="font-hanken text-sm text-brand-black/50">
+            <p className="font-hanken text-sm text-brand-black/70">
               Takes 60 seconds · No credit check
             </p>
           </div>
@@ -98,21 +98,21 @@ export function AdLandingPage({
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             <div className="flex items-center gap-2">
               <span className="font-trocchi text-2xl text-brand-black">90+</span>
-              <span className="font-hanken text-sm text-brand-black/60">Lenders</span>
+              <span className="font-hanken text-sm text-brand-black/75">Lenders</span>
             </div>
 
             <div className="hidden sm:block w-px h-8 bg-gray-300"></div>
 
             <div className="flex items-center gap-2">
               <span className="font-trocchi text-2xl text-brand-black">£0</span>
-              <span className="font-hanken text-sm text-brand-black/60">Fees</span>
+              <span className="font-hanken text-sm text-brand-black/75">Fees</span>
             </div>
 
             <div className="hidden sm:block w-px h-8 bg-gray-300"></div>
 
             <div className="flex items-center gap-2">
               <span className="font-trocchi text-2xl text-brand-black">FCA</span>
-              <span className="font-hanken text-sm text-brand-black/60">Regulated</span>
+              <span className="font-hanken text-sm text-brand-black/75">Regulated</span>
             </div>
 
             <div className="hidden sm:block w-px h-8 bg-gray-300"></div>
@@ -124,7 +124,7 @@ export function AdLandingPage({
                 width={80}
                 height={26}
               />
-              <span className="font-hanken text-sm text-brand-black/60">4.9 Rating</span>
+              <span className="font-hanken text-sm text-brand-black/75">4.9 Rating</span>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ export function AdLandingPage({
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           {/* Label */}
           <div className="mb-6">
-            <span className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase">
+            <span className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase">
               Client Success Stories
             </span>
           </div>
@@ -203,7 +203,7 @@ export function AdLandingPage({
                   <p className="font-hanken font-semibold text-brand-black mb-1">
                     {testimonial.author}
                   </p>
-                  <p className="font-hanken text-sm text-brand-black/60">
+                  <p className="font-hanken text-sm text-brand-black/75">
                     {testimonial.role}
                   </p>
                 </div>
@@ -231,7 +231,7 @@ export function AdLandingPage({
             {howItWorksSteps.map((step, index) => (
               <div key={index} className="bg-gray-100 rounded-3xl p-8 flex flex-col h-full">
                 {/* Step Label */}
-                <p className="font-jetbrains text-xs tracking-widest text-brand-black/60 uppercase mb-4">
+                <p className="font-jetbrains text-xs tracking-widest text-brand-black/75 uppercase mb-4">
                   STEP {['ONE', 'TWO', 'THREE'][index]}
                 </p>
 
@@ -253,7 +253,7 @@ export function AdLandingPage({
             >
               Get started now →
             </Button>
-            <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest mt-6">
+            <p className="font-jetbrains text-xs text-brand-black/75 uppercase tracking-widest mt-6">
               Takes 60 seconds · No credit check required
             </p>
           </div>

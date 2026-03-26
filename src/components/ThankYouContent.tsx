@@ -92,13 +92,13 @@ export function ThankYouContent({ firstName }: ThankYouContentProps) {
         </div>
 
         {/* Reassurance */}
-        <p className="font-hanken text-base text-brand-black/60 mb-12 leading-relaxed max-w-lg mx-auto">
+        <p className="font-hanken text-base text-brand-black/75 mb-12 leading-relaxed max-w-lg mx-auto">
           No pressure, no jargon — just straight answers from mates who get it.
         </p>
 
         {/* Contact Info */}
         <div className="mb-12 pt-8 border-t border-gray-200 max-w-lg mx-auto">
-          <p className="font-hanken text-sm text-brand-black/60 mb-6">
+          <p className="font-hanken text-sm text-brand-black/75 mb-6">
             Need to speak to us right away?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -138,7 +138,7 @@ export function ThankYouContent({ firstName }: ThankYouContentProps) {
         {/* Back to Home */}
         <Link
           href="/"
-          className="inline-block font-hanken text-sm text-brand-black/60 hover:text-brand-black transition-colors cursor-pointer"
+          className="inline-block font-hanken text-sm text-brand-black/75 hover:text-brand-black transition-colors cursor-pointer"
         >
           ← Back to homepage
         </Link>

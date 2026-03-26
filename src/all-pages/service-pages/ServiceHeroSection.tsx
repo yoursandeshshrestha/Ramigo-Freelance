@@ -29,7 +29,7 @@ export const ServiceHeroSection: React.FC<ServiceHeroSectionProps> = ({
           <div className="max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 mb-6">
-              <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-brand-black/60 uppercase border border-gray-300 bg-gray-100 px-4 py-2 rounded-full cursor-pointer">
+              <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-brand-black/75 uppercase border border-gray-300 bg-gray-100 px-4 py-2 rounded-full cursor-pointer">
                 Expert Advice · £0 Fees
               </span>
             </div>
@@ -55,7 +55,7 @@ export const ServiceHeroSection: React.FC<ServiceHeroSectionProps> = ({
                 Get your free quote →
               </Button>
 
-              <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
+              <p className="font-jetbrains text-xs text-brand-black/75 uppercase tracking-widest">
                 60 seconds · No credit check
               </p>
             </div>

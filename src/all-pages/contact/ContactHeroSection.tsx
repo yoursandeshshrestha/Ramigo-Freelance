@@ -25,7 +25,7 @@ export function ContactHeroSection() {
 
         {/* Subheadline */}
         <div className="max-w-2xl mx-auto text-center">
-          <p className="font-hanken text-lg md:text-xl text-brand-black/60 leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/75 leading-relaxed">
             Whether you have a question, want to discuss your options, or prefer to speak to someone directly — we&apos;re here to help.
           </p>
         </div>

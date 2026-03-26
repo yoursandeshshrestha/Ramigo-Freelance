@@ -27,7 +27,7 @@ export function AboutHeroSection() {
 
         {/* Subheadline */}
         <div className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
-          <p className="font-hanken text-lg md:text-xl text-brand-black/60 leading-relaxed">
+          <p className="font-hanken text-lg md:text-xl text-brand-black/75 leading-relaxed">
             Remigo is a friendly, modern mortgage platform. We&apos;re FCA regulated brokers who believe mortgages shouldn&apos;t be complicated. Trustworthy but not stuffy, digital-first but human when it counts.
           </p>
         </div>

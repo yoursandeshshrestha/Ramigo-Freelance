@@ -14,7 +14,7 @@ export const StatsBarSection: React.FC = () => {
           {/* Left - Heading & CTA */}
           <div className="flex flex-col justify-center">
             <div className="mb-6">
-              <span className="font-jetbrains text-xs tracking-widest text-remigo-red uppercase">
+              <span className="font-jetbrains text-sm tracking-widest text-remigo-red uppercase font-semibold">
                 See Our Stats ↗
               </span>
             </div>
@@ -42,7 +42,7 @@ export const StatsBarSection: React.FC = () => {
               <div className="font-trocchi text-5xl md:text-6xl text-brand-black shrink-0">
                 90+
               </div>
-              <p className="font-hanken text-base text-brand-black/60 flex-1 text-right">
+              <p className="font-hanken text-base text-brand-black/75 flex-1 text-right">
                 Lenders across<br />the UK
               </p>
             </div>
@@ -52,7 +52,7 @@ export const StatsBarSection: React.FC = () => {
               <div className="font-trocchi text-5xl md:text-6xl text-brand-black shrink-0">
                 £0
               </div>
-              <p className="font-hanken text-base text-brand-black/60 flex-1 text-right">
+              <p className="font-hanken text-base text-brand-black/75 flex-1 text-right">
                 Broker fees,<br />always free
               </p>
             </div>
@@ -62,7 +62,7 @@ export const StatsBarSection: React.FC = () => {
               <div className="font-trocchi text-5xl md:text-6xl text-brand-black shrink-0">
                 4.9
               </div>
-              <p className="font-hanken text-base text-brand-black/60 flex-1 text-right">
+              <p className="font-hanken text-base text-brand-black/75 flex-1 text-right">
                 Trustpilot rating<br />from 7,772 reviews
               </p>
             </div>
@@ -72,7 +72,7 @@ export const StatsBarSection: React.FC = () => {
               <div className="font-trocchi text-5xl md:text-6xl text-brand-black shrink-0">
                 5,000+
               </div>
-              <p className="font-hanken text-base text-brand-black/60 flex-1 text-right">
+              <p className="font-hanken text-base text-brand-black/75 flex-1 text-right">
                 Happy clients helped<br />find their perfect mortgage
               </p>
             </div>

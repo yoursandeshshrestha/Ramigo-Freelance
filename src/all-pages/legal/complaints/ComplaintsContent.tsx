@@ -81,7 +81,7 @@ export function ComplaintsContent() {
                 >
                   [Phone Number]
                 </a>
-                <p className="text-sm text-brand-black/60 mt-2">
+                <p className="text-sm text-brand-black/75 mt-2">
                   Monday to Friday, 9am - 6pm
                 </p>
               </div>
@@ -207,7 +207,7 @@ export function ComplaintsContent() {
                   <a href="tel:08000234567" className="text-remigo-red hover:underline cursor-pointer">
                     0800 023 4567
                   </a>
-                  <p className="text-sm text-brand-black/60 mt-1">Monday to Friday, 8am - 8pm · Saturday, 9am - 1pm</p>
+                  <p className="text-sm text-brand-black/75 mt-1">Monday to Friday, 8am - 8pm · Saturday, 9am - 1pm</p>
                 </div>
 
                 <div>
@@ -371,7 +371,7 @@ export function ComplaintsContent() {
 
       {/* Footer Note */}
       <div className="mt-16 pt-8 border-t border-brand-black/10">
-        <p className="font-hanken text-sm text-brand-black/60 text-center">
+        <p className="font-hanken text-sm text-brand-black/75 text-center">
           This complaints procedure was last updated on March 2026 and complies with FCA requirements.
         </p>
       </div>

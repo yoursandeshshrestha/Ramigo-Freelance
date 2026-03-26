@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
         <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20 lg:py-0 lg:w-[50%]">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-5">
-            <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-brand-black/60 uppercase border border-gray-300 bg-gray-100 px-4 py-2 rounded-full cursor-pointer">
+            <span className="font-jetbrains text-[10px] md:text-xs tracking-widest text-brand-black/75 uppercase border border-gray-300 bg-gray-100 px-4 py-2 rounded-full cursor-pointer">
               Whole-of-market · FCA Regulated
             </span>
           </div>
@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
           </h1>
 
           {/* Description */}
-          <p className="font-hanken text-base md:text-lg lg:text-xl text-brand-black/70 max-w-xl mb-10 leading-relaxed">
+          <p className="font-hanken text-base md:text-lg lg:text-xl text-brand-black/85 max-w-xl mb-10 leading-relaxed">
             Remortgaging, buying your first place, or self-employed and told it&apos;s &quot;complicated&quot;?
             We compare thousands of deals, cut the jargon, and get you the right one. Fast.
           </p>
@@ -50,7 +50,7 @@ export const HeroSection: React.FC = () => {
               Get your free quote
             </Button>
 
-            <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
+            <p className="font-jetbrains text-xs text-brand-black/75 uppercase tracking-widest">
               60 seconds · No credit check
             </p>
           </div>
@@ -65,6 +65,8 @@ export const HeroSection: React.FC = () => {
               fill
               className="object-cover"
               priority
+              fetchPriority="high"
+              sizes="50vw"
               unoptimized={process.env.NODE_ENV === 'development'}
             />
           </div>
@@ -73,25 +75,25 @@ export const HeroSection: React.FC = () => {
           {/* 90+ Lenders - Top Left */}
           <div className="absolute top-[15%] left-[0%] bg-sky-blue rounded-3xl px-6 py-4 shadow-2xl z-10">
             <div className="text-brand-black font-bold text-4xl font-trocchi leading-none">90+</div>
-            <div className="text-brand-black/70 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Lenders</div>
+            <div className="text-brand-black/85 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Lenders</div>
           </div>
 
           {/* 4.9/5 Trustpilot - Center */}
           <div className="absolute top-[7%] right-[30%] bg-amber rounded-3xl px-7 py-5 shadow-2xl z-10">
             <div className="text-brand-black font-bold text-5xl font-trocchi leading-none">4.9/5</div>
-            <div className="text-brand-black/70 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Trustpilot</div>
+            <div className="text-brand-black/85 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Trustpilot</div>
           </div>
 
           {/* £0 Broker Fees - Right */}
           <div className="absolute top-[66%] right-[40%] bg-remigo-red rounded-3xl px-7 py-5 shadow-2xl z-10">
             <div className="text-brand-white font-bold text-5xl font-trocchi leading-none">£0</div>
-            <div className="text-brand-white/90 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Broker Fees</div>
+            <div className="text-brand-white text-[10px] uppercase tracking-widest font-jetbrains mt-3">Broker Fees</div>
           </div>
 
           {/* 5k+ Clients - Bottom Left */}
           <div className="absolute bottom-[25%] left-[10%] bg-burgundy rounded-3xl px-6 py-4 shadow-2xl z-10">
             <div className="text-brand-white font-bold text-4xl font-trocchi leading-none">5k+</div>
-            <div className="text-brand-white/90 text-[10px] uppercase tracking-widest font-jetbrains mt-3">Clients helped</div>
+            <div className="text-brand-white text-[10px] uppercase tracking-widest font-jetbrains mt-3">Clients helped</div>
           </div>
         </div>
       </div>
@@ -104,6 +106,8 @@ export const HeroSection: React.FC = () => {
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
+          sizes="100vw"
         />
       </div>
 
@@ -122,11 +126,11 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-remigo-red rounded-2xl px-5 py-4 text-center">
             <div className="text-brand-white font-bold text-3xl font-trocchi">£0</div>
-            <div className="text-brand-white/90 text-[10px] uppercase tracking-wider font-jetbrains">Broker Fees</div>
+            <div className="text-brand-white text-[10px] uppercase tracking-wider font-jetbrains">Broker Fees</div>
           </div>
           <div className="bg-burgundy rounded-2xl px-5 py-4 text-center">
             <div className="text-brand-white font-bold text-3xl font-trocchi">5k+</div>
-            <div className="text-brand-white/90 text-[10px] uppercase tracking-wider font-jetbrains">Clients helped</div>
+            <div className="text-brand-white text-[10px] uppercase tracking-wider font-jetbrains">Clients helped</div>
           </div>
         </div>
       </div>

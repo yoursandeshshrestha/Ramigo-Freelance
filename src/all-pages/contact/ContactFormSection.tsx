@@ -137,7 +137,7 @@ export function ContactFormSection() {
           <h2 className="font-trocchi text-3xl md:text-4xl lg:text-5xl text-brand-black mb-4">
             Send Us a Message
           </h2>
-          <p className="font-hanken text-lg text-brand-black/60">
+          <p className="font-hanken text-lg text-brand-black/75">
             Fill in the form below and we&apos;ll get back to you as soon as possible.
           </p>
         </div>
@@ -249,7 +249,7 @@ export function ContactFormSection() {
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
-            <p className="text-center font-hanken text-sm text-brand-black/60 mt-4">
+            <p className="text-center font-hanken text-sm text-brand-black/75 mt-4">
               * Required fields
             </p>
           </div>

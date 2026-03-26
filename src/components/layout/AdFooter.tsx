@@ -10,7 +10,7 @@ export const AdFooter: React.FC = () => {
             href="/privacy-policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-hanken text-sm text-brand-black/60 hover:text-remigo-red transition-colors cursor-pointer"
+            className="font-hanken text-sm text-brand-black/75 hover:text-remigo-red transition-colors cursor-pointer"
           >
             Privacy Policy
           </Link>
@@ -18,7 +18,7 @@ export const AdFooter: React.FC = () => {
             href="/terms"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-hanken text-sm text-brand-black/60 hover:text-remigo-red transition-colors cursor-pointer"
+            className="font-hanken text-sm text-brand-black/75 hover:text-remigo-red transition-colors cursor-pointer"
           >
             Terms of Use
           </Link>
@@ -26,7 +26,7 @@ export const AdFooter: React.FC = () => {
             href="/cookie-policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-hanken text-sm text-brand-black/60 hover:text-remigo-red transition-colors cursor-pointer"
+            className="font-hanken text-sm text-brand-black/75 hover:text-remigo-red transition-colors cursor-pointer"
           >
             Cookie Policy
           </Link>
@@ -34,7 +34,7 @@ export const AdFooter: React.FC = () => {
             href="/complaints"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-hanken text-sm text-brand-black/60 hover:text-remigo-red transition-colors cursor-pointer"
+            className="font-hanken text-sm text-brand-black/75 hover:text-remigo-red transition-colors cursor-pointer"
           >
             Complaints
           </Link>
@@ -43,10 +43,10 @@ export const AdFooter: React.FC = () => {
         {/* FCA Disclaimer */}
         <div className="max-w-3xl mx-auto">
           <div className="bg-brand-black/5 rounded-xl p-6 mb-6">
-            <p className="font-hanken text-xs text-brand-black/60 leading-relaxed mb-2 text-center">
+            <p className="font-hanken text-xs text-brand-black/75 leading-relaxed mb-2 text-center">
               <strong className="text-brand-black/80">Important:</strong> Your home may be repossessed if you do not keep up repayments on your mortgage.
             </p>
-            <p className="font-hanken text-xs text-brand-black/60 leading-relaxed text-center">
+            <p className="font-hanken text-xs text-brand-black/75 leading-relaxed text-center">
               Remigo is a trading name of [Legal Entity]. Authorised and regulated by the Financial Conduct Authority. FCA registration number: [XXXXXX].
             </p>
           </div>
