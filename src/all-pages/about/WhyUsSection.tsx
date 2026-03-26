@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export function WhyUsSection() {
@@ -125,7 +123,7 @@ export function WhyUsSection() {
                 </svg>
               </div>
               <Image
-                src="/remigo-logo-full-dark.png"
+                src="/logos/remigo-full-dark.png"
                 alt="Remigo"
                 width={120}
                 height={34}

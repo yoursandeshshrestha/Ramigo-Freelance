@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export function AboutHeroSection() {
@@ -39,7 +37,7 @@ export function AboutHeroSection() {
           {/* Large image - left */}
           <div className="col-span-2 md:col-span-1 md:row-span-2 bg-brand-black/5 rounded-3xl overflow-hidden aspect-3/4 md:aspect-auto relative">
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Remigo team"
               fill
               className="object-cover"
@@ -50,7 +48,7 @@ export function AboutHeroSection() {
           {/* Top right image */}
           <div className="col-span-2 md:col-span-1 bg-brand-black/5 rounded-3xl overflow-hidden aspect-video relative">
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Mortgage advice"
               fill
               className="object-cover"
@@ -61,7 +59,7 @@ export function AboutHeroSection() {
           {/* Bottom right image */}
           <div className="col-span-2 md:col-span-1 bg-brand-black/5 rounded-3xl overflow-hidden aspect-video relative">
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Happy clients"
               fill
               className="object-cover"

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export function TeamSection() {
@@ -10,7 +8,7 @@ export function TeamSection() {
           {/* Left - Photo */}
           <div className="relative h-[600px] rounded-3xl overflow-hidden bg-brand-black/5">
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Kris - Mortgage Adviser"
               fill
               className="object-cover grayscale"

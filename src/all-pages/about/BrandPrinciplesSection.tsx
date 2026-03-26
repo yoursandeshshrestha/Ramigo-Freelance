@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export function BrandPrinciplesSection() {
@@ -76,7 +74,7 @@ export function BrandPrinciplesSection() {
           {/* Right Side - Image (matches height of left cards grid) */}
           <div className="relative rounded-3xl overflow-hidden bg-brand-black/5 h-full min-h-[500px]">
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Remigo team helping clients"
               fill
               className="object-cover"
