@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui';
+import { useUTMCapture, getStoredUTMParams } from '@/hooks/useUTMCapture';
+import { getDeviceType } from '@/utils/deviceDetection';
+import { LeadData } from '@/services/hubspot';
 
 interface FormData {
   mortgageType: string;
@@ -32,6 +35,11 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
     phone: '',
     email: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Capture UTM parameters
+  useUTMCapture();
 
   const totalSteps = 4;
 
@@ -95,12 +103,96 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
     setFormData({ ...formData, propertyValue: formatted });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Submit to CRM
-    console.log('Form submitted:', formData);
-    onClose();
-    // Show thank you message or redirect
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      // Gather all data for submission
+      const leadData: LeadData = {
+        // Form fields
+        mortgageType: formData.mortgageType,
+        timeline: formData.timeline,
+        propertyValue: formData.propertyValue,
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+
+        // Tracking data
+        sourceUrl: window.location.href,
+        deviceType: getDeviceType(),
+        submissionTimestamp: new Date().toISOString(),
+
+        // UTM parameters
+        utmParams: getStoredUTMParams(),
+      };
+
+      // Submit to API
+      const response = await fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(leadData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Success! Redirect to thank you page with name
+        console.log('Lead submitted successfully');
+        const firstName = formData.fullName.split(' ')[0];
+        window.location.href = `/thank-you?name=${encodeURIComponent(firstName)}`;
+      } else {
+        // API failed after retries
+        if (result.shouldStoreLocally) {
+          // Store in localStorage for manual recovery
+          storeFailedSubmission(leadData);
+          setSubmitError(
+            'We couldn\'t submit your details right now. We\'ve saved your information and will contact you shortly.'
+          );
+        } else {
+          setSubmitError(result.error || 'Something went wrong. Please try again.');
+        }
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+
+      // Store in localStorage as fallback
+      const leadData: LeadData = {
+        mortgageType: formData.mortgageType,
+        timeline: formData.timeline,
+        propertyValue: formData.propertyValue,
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        sourceUrl: window.location.href,
+        deviceType: getDeviceType(),
+        submissionTimestamp: new Date().toISOString(),
+        utmParams: getStoredUTMParams(),
+      };
+
+      storeFailedSubmission(leadData);
+      setSubmitError(
+        'We couldn\'t submit your details right now. We\'ve saved your information and will contact you shortly.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Store failed submissions in localStorage for manual recovery
+  const storeFailedSubmission = (data: LeadData) => {
+    try {
+      const stored = localStorage.getItem('remigo_failed_submissions') || '[]';
+      const submissions = JSON.parse(stored);
+      submissions.push(data);
+      localStorage.setItem('remigo_failed_submissions', JSON.stringify(submissions));
+      console.log('Failed submission stored locally');
+    } catch (e) {
+      console.error('Failed to store submission locally:', e);
+    }
   };
 
   const canContinueStep3 = formData.propertyValue.length > 0;
@@ -109,17 +201,29 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-black/50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-black/60 backdrop-blur-sm">
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-brand-white border border-gray-200 rounded-3xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-2xl bg-brand-white rounded-3xl shadow-2xl overflow-hidden">
+        {/* Abstract Background Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: '#DB3B3B', opacity: 0.06 }}></div>
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: '#8ECAFE', opacity: 0.08 }}></div>
+          <div className="absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl" style={{ backgroundColor: '#FDB932', opacity: 0.04 }}></div>
+        </div>
+
+        {/* Decorative Pattern */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer z-10"
+          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-brand-black/5 hover:bg-remigo-red hover:text-brand-white flex items-center justify-center transition-all duration-300 cursor-pointer z-10 group"
           aria-label="Close"
         >
           <svg
-            className="w-5 h-5 text-brand-black"
+            className="w-5 h-5 text-brand-black group-hover:text-brand-white transition-colors"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -132,15 +236,15 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
         </button>
 
         {/* Progress Bar */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200">
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gray-200/50">
           <div
-            className="h-full bg-remigo-red transition-all duration-300"
+            className="h-full bg-gradient-to-r from-remigo-red via-[#FDB932] to-[#8ECAFE] transition-all duration-500"
             style={{ width: `${(currentStep / totalSteps) * 100}%` }}
           />
         </div>
 
         {/* Content */}
-        <div className="p-8 md:p-12 pt-16">
+        <div className="relative p-8 md:p-12 pt-16">
           {/* Step Counter */}
           <div className="mb-6">
             <p className="font-jetbrains text-xs text-brand-black/60 uppercase tracking-widest">
@@ -159,10 +263,10 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   <button
                     key={type.value}
                     onClick={() => handleMortgageTypeSelect(type.value)}
-                    className={`p-6 rounded-2xl border-2 transition-all cursor-pointer text-left ${
+                    className={`p-6 rounded-2xl border-2 transition-all cursor-pointer text-left hover:scale-[1.02] ${
                       formData.mortgageType === type.value
-                        ? 'border-remigo-red bg-remigo-red/10'
-                        : 'border-gray-200 hover:border-gray-300 bg-[#faf5f5]'
+                        ? 'border-remigo-red bg-remigo-red/10 shadow-lg'
+                        : 'border-gray-200 hover:border-remigo-red/50 bg-gray-50 hover:bg-gray-100'
                     }`}
                   >
                     <div className="font-trocchi text-xl text-brand-black mb-1">
@@ -204,10 +308,10 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   <button
                     key={timeline.value}
                     onClick={() => handleTimelineSelect(timeline.value)}
-                    className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
+                    className={`p-6 rounded-2xl border-2 transition-all cursor-pointer hover:scale-[1.02] ${
                       formData.timeline === timeline.value
-                        ? 'border-remigo-red bg-remigo-red/10'
-                        : 'border-gray-200 hover:border-gray-300 bg-[#faf5f5]'
+                        ? 'border-remigo-red bg-remigo-red/10 shadow-lg'
+                        : 'border-gray-200 hover:border-remigo-red/50 bg-gray-50 hover:bg-gray-100'
                     }`}
                   >
                     <div className="font-hanken text-base font-semibold text-brand-black">
@@ -243,7 +347,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                   value={formData.propertyValue}
                   onChange={handlePropertyValueChange}
                   placeholder="250,000"
-                  className="w-full pl-12 pr-6 py-6 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-trocchi text-2xl text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
+                  className="w-full pl-12 pr-6 py-6 bg-gray-50 border-2 border-gray-200 rounded-2xl font-trocchi text-2xl text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red focus:bg-brand-white transition-all"
                 />
               </div>
               <Button
@@ -282,7 +386,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
-                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red focus:bg-brand-white transition-all"
                     placeholder="John Smith"
                   />
                 </div>
@@ -296,7 +400,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
-                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red focus:bg-brand-white transition-all"
                     placeholder="07123 456789"
                   />
                 </div>
@@ -309,19 +413,26 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#faf5f5] border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red transition-colors"
+                    className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-200 rounded-2xl font-hanken text-brand-black placeholder-gray-400 focus:outline-none focus:border-remigo-red focus:bg-brand-white transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
+              {submitError && (
+                <div className="bg-remigo-red/10 border border-remigo-red/20 rounded-2xl p-4">
+                  <p className="font-hanken text-sm text-remigo-red text-center">
+                    {submitError}
+                  </p>
+                </div>
+              )}
               <Button
                 type="submit"
                 variant="primary"
                 size="lg"
-                disabled={!canSubmit}
+                disabled={!canSubmit || isSubmitting}
                 className="w-full font-hanken font-semibold"
               >
-                Get my free quote →
+                {isSubmitting ? 'Submitting...' : 'Get my free quote →'}
               </Button>
               <p className="font-jetbrains text-xs text-center text-brand-black/50 uppercase tracking-widest">
                 FCA regulated · £0 fees · We'll call within the hour
