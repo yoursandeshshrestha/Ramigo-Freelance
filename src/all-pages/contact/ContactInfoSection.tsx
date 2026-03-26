@@ -1,5 +1,3 @@
-'use client';
-
 export function ContactInfoSection() {
   return (
     <section className="relative bg-brand-white py-12 md:py-16">

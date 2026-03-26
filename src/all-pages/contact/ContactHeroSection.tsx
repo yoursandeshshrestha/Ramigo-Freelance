@@ -1,5 +1,3 @@
-'use client';
-
 export function ContactHeroSection() {
   return (
     <section className="relative bg-brand-white pt-40 pb-12 md:pb-16">
