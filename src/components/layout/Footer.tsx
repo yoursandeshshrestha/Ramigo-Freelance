@@ -30,17 +30,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-brand-black mx-3 mb-3 rounded-3xl overflow-hidden pt-16 md:pt-20">
-      {/* Large Remigo Text with Bottom Fade */}
-      <div className="relative -mt-8 md:-mt-12">
-        <div className="text-center relative">
-          <h2 className="font-trocchi text-[12rem] md:text-[16rem] lg:text-[20rem] text-brand-white/5 select-none leading-none uppercase">
-            REMIGO
-          </h2>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-brand-black via-brand-black/80 to-transparent z-10 pointer-events-none" />
-      </div>
-
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pb-12 md:pb-16 -mt-32 relative z-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pb-12 md:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Logo */}
           <div>
@@ -77,16 +67,36 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-trocchi text-base text-brand-white mb-4">Contact</h3>
             <div className="flex flex-col gap-3">
-              <a
-                href="tel:+441234567890"
+              <Link
+                href="/contact"
                 className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer"
               >
+                Contact Us
+              </Link>
+              <a
+                href="tel:+441234567890"
+                className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer flex items-center gap-2"
+              >
+                <Image
+                  src="/icons/telephone.svg"
+                  alt="Phone"
+                  width={16}
+                  height={16}
+                  className="brightness-0 invert"
+                />
                 0123 456 7890
               </a>
               <a
                 href="mailto:hello@remigo.co.uk"
-                className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer"
+                className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer flex items-center gap-2"
               >
+                <Image
+                  src="/icons/mail.svg"
+                  alt="Email"
+                  width={16}
+                  height={16}
+                  className="brightness-0 invert"
+                />
                 hello@remigo.co.uk
               </a>
             </div>
