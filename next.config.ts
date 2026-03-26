@@ -13,10 +13,6 @@ const nextConfig: NextConfig = {
     // Remove console.log in production
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Enable experimental optimizations
-  experimental: {
-    optimizePackageImports: ['framer-motion'],
-  },
 };
 
 export default nextConfig;
