@@ -119,7 +119,7 @@ export function AdLandingPage({
 
             <div className="flex items-center gap-3">
               <Image
-                src="/others/trustpilot.svg"
+                src="/trustpilot/logo.svg"
                 alt="Trustpilot"
                 width={80}
                 height={26}
@@ -150,7 +150,7 @@ export function AdLandingPage({
                 <div className="flex items-start gap-4">
                   <div className="shrink-0">
                     <Image
-                      src="/others/right.png"
+                      src="/icons/ui/checkmark.png"
                       alt="Check"
                       width={40}
                       height={40}
@@ -186,7 +186,7 @@ export function AdLandingPage({
                 {/* Trustpilot Stars */}
                 <div className="mb-6">
                   <Image
-                    src="/others/trustpilot-5-star.svg"
+                    src="/trustpilot/5-stars.svg"
                     alt="5 stars"
                     width={120}
                     height={24}
