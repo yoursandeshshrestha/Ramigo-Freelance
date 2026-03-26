@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
         <div className="relative hidden lg:block lg:w-[50%] h-full">
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'ellipse(100% 100% at 100% 50%)' }}>
             <Image
-              src="/hero-women.jpg"
+              src="/images/hero/team-consultation.jpg"
               alt="Remigo mortgage advisor"
               fill
               className="object-cover"
@@ -99,7 +99,7 @@ export const HeroSection: React.FC = () => {
       {/* Mobile Image */}
       <div className="lg:hidden relative w-full h-[400px]">
         <Image
-          src="/hero-women.jpg"
+          src="/images/hero/team-consultation.jpg"
           alt="Remigo mortgage advisor"
           fill
           className="object-cover"

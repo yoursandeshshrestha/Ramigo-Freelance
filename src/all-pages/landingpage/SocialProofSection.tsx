@@ -61,7 +61,7 @@ export const SocialProofSection: React.FC = () => {
               {/* 5-Star Rating */}
               <div className="mb-6">
                 <Image
-                  src="/others/trustpilot-5-star.svg"
+                  src="/trustpilot/5-stars.svg"
                   alt="5 stars"
                   width={120}
                   height={24}
@@ -89,13 +89,13 @@ export const SocialProofSection: React.FC = () => {
         {/* Trustpilot Rating */}
         <div className="flex items-center gap-4">
           <Image
-            src="/others/trustpilot.svg"
+            src="/trustpilot/logo.svg"
             alt="Trustpilot"
             width={120}
             height={40}
           />
           <Image
-            src="/others/trustpilot-5-star.svg"
+            src="/trustpilot/5-stars.svg"
             alt="5 stars"
             width={120}
             height={24}
