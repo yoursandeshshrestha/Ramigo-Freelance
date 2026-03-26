@@ -50,6 +50,7 @@ export const Header: React.FC = () => {
     { href: '/self-employed-mortgage', label: 'Self-Employed' },
     { href: '/protection', label: 'Protection' },
     { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
   ];
 
   return (

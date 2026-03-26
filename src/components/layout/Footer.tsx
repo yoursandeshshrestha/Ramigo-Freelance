@@ -13,6 +13,7 @@ export const Footer: React.FC = () => {
     { href: '/self-employed-mortgage', label: 'Self-Employed' },
     { href: '/protection', label: 'Protection' },
     { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
   ];
 
   const legalLinks = [
