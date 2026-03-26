@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link href="/" className="cursor-pointer">
               <Image
-                src="/remigo-logo-full-dark.png"
+                src="/logos/remigo-full-dark.png"
                 alt="Remigo"
                 width={isScrolled ? 120 : 140}
                 height={isScrolled ? 34 : 40}

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,7 +9,7 @@ export const AdHeader: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="cursor-pointer">
             <Image
-              src="/remigo-logo-full-dark.png"
+              src="/logos/remigo-full-dark.png"
               alt="Remigo"
               width={120}
               height={34}

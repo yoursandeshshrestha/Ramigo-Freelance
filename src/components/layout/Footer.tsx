@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -57,7 +55,7 @@ export const Footer: React.FC = () => {
           <div>
             <Link href="/" className="inline-block mb-6 cursor-pointer">
               <Image
-                src="/remigo-logo-full.svg"
+                src="/logos/remigo-full-light.svg"
                 alt="Remigo"
                 width={140}
                 height={40}
@@ -99,7 +97,7 @@ export const Footer: React.FC = () => {
                 className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer flex items-center gap-2"
               >
                 <Image
-                  src="/icons/telephone.svg"
+                  src="/icons/ui/phone.svg"
                   alt="Phone"
                   width={16}
                   height={16}
@@ -112,7 +110,7 @@ export const Footer: React.FC = () => {
                 className="font-hanken text-sm text-brand-white/60 hover:text-brand-white transition-colors cursor-pointer flex items-center gap-2"
               >
                 <Image
-                  src="/icons/mail.svg"
+                  src="/icons/ui/mail.svg"
                   alt="Email"
                   width={16}
                   height={16}
