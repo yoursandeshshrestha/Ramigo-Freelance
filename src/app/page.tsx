@@ -3,12 +3,12 @@ import {
   ServiceCardsSection,
   StatsBarSection,
   SocialProofSection,
-} from '@/features/landingpage';
+} from '@/all-pages/landingpage';
 import {
   HowItWorksSection,
   FAQSection,
   FinalCTASection,
-} from '@/features/common';
+} from '@/all-pages/common';
 
 export default function HomePage() {
   return (
