@@ -1,5 +1,11 @@
 import React from 'react';
-import { AboutPageClient } from './AboutPageClient';
+import {
+  AboutHeroSection,
+  BrandPrinciplesSection,
+  WhyUsSection,
+  TeamSection,
+  AboutCTASection,
+} from '@/all-pages/about';
 
 export const metadata = {
   title: 'About Remigo | FCA Regulated Mortgage Broker',
@@ -8,5 +14,13 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutPageClient />;
+  return (
+    <main>
+      <AboutHeroSection />
+      <BrandPrinciplesSection />
+      <WhyUsSection />
+      <TeamSection />
+      <AboutCTASection />
+    </main>
+  );
 }
