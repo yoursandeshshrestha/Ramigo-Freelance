@@ -21,7 +21,7 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #8ECAFE 0%, #FDB932 50%, #DB3B3B 100%)',
+          background: 'linear-gradient(135deg, var(--color-sky-blue) 0%, var(--color-amber) 50%, var(--color-remigo-red) 100%)',
           position: 'relative',
         }}
       >
@@ -68,7 +68,7 @@ export default async function Image() {
             style={{
               fontSize: 72,
               fontWeight: 700,
-              color: '#0C0C0C',
+              color: 'var(--color-brand-black)',
               marginBottom: 24,
               letterSpacing: '-0.02em',
             }}
@@ -81,7 +81,7 @@ export default async function Image() {
             style={{
               fontSize: 48,
               fontWeight: 400,
-              color: '#0C0C0C',
+              color: 'var(--color-brand-black)',
               marginBottom: 32,
               lineHeight: 1.3,
               maxWidth: 900,
@@ -96,7 +96,7 @@ export default async function Image() {
               display: 'flex',
               gap: 40,
               fontSize: 28,
-              color: '#0C0C0C',
+              color: 'var(--color-brand-black)',
               opacity: 0.9,
             }}
           >

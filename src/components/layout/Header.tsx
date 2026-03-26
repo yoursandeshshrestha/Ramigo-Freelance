@@ -63,15 +63,16 @@ export const Header: React.FC = () => {
         <div className={`mx-auto px-6 md:px-12 transition-all duration-300 ${isScrolled ? 'max-w-[1400px]' : 'lg:px-16'}`}>
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="cursor-pointer">
-              <Image
-                src="/logos/remigo-full-dark.png"
-                alt="Remigo"
-                width={isScrolled ? 120 : 140}
-                height={isScrolled ? 34 : 40}
-                className="transition-all duration-300"
-                priority
-              />
+            <Link href="/" className="cursor-pointer block">
+              <div className={`transition-transform duration-300 ${isScrolled ? 'scale-[0.857]' : 'scale-100'}`} style={{ transformOrigin: 'left center' }}>
+                <Image
+                  src="/logos/remigo-full-dark.png"
+                  alt="Remigo"
+                  width={140}
+                  height={40}
+                  priority
+                />
+              </div>
             </Link>
 
             {/* Desktop Navigation */}

@@ -81,7 +81,7 @@ export const ServiceCardsSection: React.FC = () => {
             </div>
 
             <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6 leading-tight">
-              What can we <span className="text-[#d93b3b]">help</span> you with?
+              What can we <span className="text-remigo-red">help</span> you with?
             </h2>
             <p className="font-hanken text-lg text-brand-black/70 leading-relaxed">
               Choose your situation and we'll find you the perfect deal. Expert advice tailored to your needs.

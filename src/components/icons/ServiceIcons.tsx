@@ -15,7 +15,7 @@ export const RemortgageIcon = () => (
     {/* Comparison interface */}
     <div className="space-y-2.5">
       <motion.div
-        className="bg-[#f5f5f5] border border-gray-200 rounded-lg p-2.5 flex justify-between items-center"
+        className="bg-gray-100 border border-gray-200 rounded-lg p-2.5 flex justify-between items-center"
         initial={{ x: -30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2, repeat: Infinity, repeatDelay: 4 }}
@@ -67,7 +67,7 @@ export const FirstTimeBuyerIcon = () => (
 
     {/* Property card */}
     <motion.div
-      className="bg-[#f5f5f5] border border-gray-200 rounded-lg overflow-hidden"
+      className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, delay: 0.2, repeat: Infinity, repeatDelay: 4 }}
@@ -129,7 +129,7 @@ export const SelfEmployedIcon = () => (
       {['SA302 Tax Return', 'Company Accounts', 'Bank Statements'].map((doc, i) => (
         <motion.div
           key={doc}
-          className="bg-[#f5f5f5] border border-gray-200 rounded-lg p-2.5 flex items-center justify-between group"
+          className="bg-gray-100 border border-gray-200 rounded-lg p-2.5 flex items-center justify-between group"
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: i * 0.3, repeat: Infinity, repeatDelay: 4 }}
@@ -147,7 +147,7 @@ export const SelfEmployedIcon = () => (
           >
             <div className="w-4 h-4 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                <path d="M2 4 L3.5 5.5 L6.5 2.5" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M2 4 L3.5 5.5 L6.5 2.5" stroke="var(--color-success-light)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
           </motion.div>
@@ -209,7 +209,7 @@ export const ProtectionIcon = () => (
 
       {/* Critical Illness - Inactive */}
       <motion.div
-        className="bg-[#f5f5f5] border border-gray-200 rounded-lg p-2.5 opacity-60"
+        className="bg-gray-100 border border-gray-200 rounded-lg p-2.5 opacity-60"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
         transition={{ duration: 0.4, delay: 1, repeat: Infinity, repeatDelay: 4 }}

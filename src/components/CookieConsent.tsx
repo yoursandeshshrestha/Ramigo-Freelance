@@ -158,7 +158,7 @@ export const CookieConsent: React.FC = () => {
 
             <div className="space-y-6">
               {/* Necessary Cookies */}
-              <div className="p-6 bg-[#faf5f5] border border-gray-200 rounded-2xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-2xl">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <h3 className="font-trocchi text-lg text-brand-black mb-2">
@@ -176,7 +176,7 @@ export const CookieConsent: React.FC = () => {
               </div>
 
               {/* Analytics Cookies */}
-              <div className="p-6 bg-[#faf5f5] border border-gray-200 rounded-2xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-2xl">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <h3 className="font-trocchi text-lg text-brand-black mb-2">
@@ -204,7 +204,7 @@ export const CookieConsent: React.FC = () => {
               </div>
 
               {/* Marketing Cookies */}
-              <div className="p-6 bg-[#faf5f5] border border-gray-200 rounded-2xl">
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-2xl">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <h3 className="font-trocchi text-lg text-brand-black mb-2">

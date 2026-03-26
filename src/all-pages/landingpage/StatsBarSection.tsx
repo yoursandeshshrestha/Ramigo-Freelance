@@ -20,7 +20,7 @@ export const StatsBarSection: React.FC = () => {
             </div>
 
             <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-8 leading-tight">
-              What We've <span className="text-[#d93b3b]">Achieved</span> With Our Incredible Community
+              What We've <span className="text-remigo-red">Achieved</span> With Our Incredible Community
             </h2>
 
             <div className="inline-block">

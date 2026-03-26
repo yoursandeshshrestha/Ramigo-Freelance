@@ -11,7 +11,7 @@ export const QuestionnaireIcon = () => (
     <div className="space-y-2.5">
       {/* Question 1 - Radio buttons */}
       <motion.div
-        className="bg-[#f5f5f5] border border-gray-200 rounded-lg p-2.5"
+        className="bg-gray-100 border border-gray-200 rounded-lg p-2.5"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2, repeat: Infinity, repeatDelay: 4 }}
@@ -55,8 +55,8 @@ export const QuestionnaireIcon = () => (
             <motion.div
               key={i}
               className="w-1 h-1 rounded-full bg-gray-300"
-              initial={{ backgroundColor: '#d1d5db' }}
-              animate={{ backgroundColor: i === 0 ? '#DB3B3B' : '#d1d5db' }}
+              initial={{ backgroundColor: 'var(--color-gray-300)' }}
+              animate={{ backgroundColor: i === 0 ? 'var(--color-remigo-red)' : 'var(--color-gray-300)' }}
               transition={{ duration: 0.3, delay: 1.4, repeat: Infinity, repeatDelay: 4 }}
             />
           ))}
@@ -100,7 +100,7 @@ export const ComparisonIcon = () => (
           className={`border rounded-lg p-2.5 flex items-center justify-between ${
             lender.best
               ? 'bg-white border-gray-300'
-              : 'bg-[#f5f5f5] border-gray-200'
+              : 'bg-gray-100 border-gray-200'
           }`}
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -171,7 +171,7 @@ export const CallNotificationIcon = () => (
 
       {/* Call timer */}
       <motion.div
-        className="flex items-center justify-center gap-2 bg-[#f5f5f5] border border-gray-200 rounded-lg p-2"
+        className="flex items-center justify-center gap-2 bg-gray-100 border border-gray-200 rounded-lg p-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.2, repeat: Infinity, repeatDelay: 4 }}
@@ -187,7 +187,7 @@ export const CallNotificationIcon = () => (
 
     {/* Response time badge */}
     <motion.div
-      className="flex items-center justify-between bg-[#f5f5f5] border border-gray-200 rounded-lg p-2 mt-2.5"
+      className="flex items-center justify-between bg-gray-100 border border-gray-200 rounded-lg p-2 mt-2.5"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 1.5, repeat: Infinity, repeatDelay: 4 }}
@@ -228,7 +228,7 @@ export const ProgressTrackerIcon = () => (
                 transition={{ duration: 0.4, delay: i * 0.3 + 0.2, repeat: Infinity, repeatDelay: 4 }}
               >
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                  <path d="M2 4 L3.5 5.5 L6.5 2.5" stroke="#22c55e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M2 4 L3.5 5.5 L6.5 2.5" stroke="var(--color-success-light)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </motion.div>
             ) : step.status === 'active' ? (

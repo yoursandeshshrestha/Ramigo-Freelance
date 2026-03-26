@@ -13,9 +13,9 @@ export function ThankYouContent({ firstName }: ThankYouContentProps) {
     <div className="min-h-screen bg-brand-white flex items-center justify-center p-6">
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: '#DB3B3B', opacity: 0.06 }}></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: '#8ECAFE', opacity: 0.08 }}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: '#FDB932', opacity: 0.04 }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-remigo-red)', opacity: 0.06 }}></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-sky-blue)', opacity: 0.08 }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-amber)', opacity: 0.04 }}></div>
       </div>
 
       {/* Decorative Pattern */}

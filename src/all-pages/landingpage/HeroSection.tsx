@@ -87,13 +87,13 @@ export const HeroSection: React.FC = () => {
           {/* £0 Broker Fees - Right */}
           <div className="absolute top-[66%] right-[40%] bg-remigo-red rounded-3xl px-7 py-5 shadow-2xl z-10">
             <div className="text-brand-white font-bold text-5xl font-trocchi leading-none">£0</div>
-            <div className="text-brand-white text-[10px] uppercase tracking-widest font-jetbrains mt-3">Broker Fees</div>
+            <div className="text-brand-white text-xs uppercase tracking-widest font-jetbrains mt-3 font-semibold">Broker Fees</div>
           </div>
 
           {/* 5k+ Clients - Bottom Left */}
           <div className="absolute bottom-[25%] left-[10%] bg-burgundy rounded-3xl px-6 py-4 shadow-2xl z-10">
             <div className="text-brand-white font-bold text-4xl font-trocchi leading-none">5k+</div>
-            <div className="text-brand-white text-[10px] uppercase tracking-widest font-jetbrains mt-3">Clients helped</div>
+            <div className="text-brand-white text-xs uppercase tracking-widest font-jetbrains mt-3 font-semibold">Clients helped</div>
           </div>
         </div>
       </div>
@@ -126,11 +126,11 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-remigo-red rounded-2xl px-5 py-4 text-center">
             <div className="text-brand-white font-bold text-3xl font-trocchi">£0</div>
-            <div className="text-brand-white text-[10px] uppercase tracking-wider font-jetbrains">Broker Fees</div>
+            <div className="text-brand-white text-xs uppercase tracking-wider font-jetbrains font-semibold">Broker Fees</div>
           </div>
           <div className="bg-burgundy rounded-2xl px-5 py-4 text-center">
             <div className="text-brand-white font-bold text-3xl font-trocchi">5k+</div>
-            <div className="text-brand-white text-[10px] uppercase tracking-wider font-jetbrains">Clients helped</div>
+            <div className="text-brand-white text-xs uppercase tracking-wider font-jetbrains font-semibold">Clients helped</div>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'font-roboto font-medium rounded-lg transition-all duration-200 cursor-pointer uppercase tracking-wide';
 
   const variantStyles = {
-    primary: 'bg-remigo-red text-white hover:bg-[#c63333] active:scale-[0.98]',
+    primary: 'bg-remigo-red text-white hover:bg-remigo-red-dark active:scale-[0.98]',
     secondary: 'bg-transparent border-2 border-remigo-red text-remigo-red hover:bg-remigo-red hover:text-white',
     tertiary: 'bg-transparent text-remigo-red hover:underline',
   };

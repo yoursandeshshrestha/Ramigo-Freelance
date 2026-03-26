@@ -1,7 +1,10 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { MultiStepFormModal } from './MultiStepFormModal';
+import React, { createContext, useContext, useState, ReactNode, lazy, Suspense } from 'react';
+
+const MultiStepFormModal = lazy(() =>
+  import('./MultiStepFormModal').then(module => ({ default: module.MultiStepFormModal }))
+);
 
 interface FormModalContextType {
   openForm: (preSelectedType?: string) => void;
@@ -35,11 +38,15 @@ export const FormModalProvider: React.FC<{ children: ReactNode }> = ({ children 
   return (
     <FormModalContext.Provider value={{ openForm, closeForm, isOpen }}>
       {children}
-      <MultiStepFormModal
-        isOpen={isOpen}
-        onClose={closeForm}
-        preSelectedType={preSelectedType}
-      />
+      {isOpen && (
+        <Suspense fallback={null}>
+          <MultiStepFormModal
+            isOpen={isOpen}
+            onClose={closeForm}
+            preSelectedType={preSelectedType}
+          />
+        </Suspense>
+      )}
     </FormModalContext.Provider>
   );
 };

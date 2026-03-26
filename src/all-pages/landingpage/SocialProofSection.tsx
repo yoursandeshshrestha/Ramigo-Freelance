@@ -44,7 +44,7 @@ export const SocialProofSection: React.FC = () => {
         <div className="mb-12 md:mb-16">
           <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
             <span className="text-brand-black block">Don&apos;t take our word for it,</span>
-            <span className="text-[#d83b3b]">see what our clients say</span>
+            <span className="text-remigo-red">see what our clients say</span>
           </h2>
           <p className="font-hanken text-lg text-brand-black/75 leading-relaxed">
             We&apos;re honored by the feedback, and it fuels our commitment to delivering exceptional mortgage services. Read the reviews to hear firsthand how Remigo is making a positive impact on people&apos;s lives. Your trust is our greatest achievement.

@@ -262,13 +262,13 @@ export function AdLandingPage({
 
       {/* Final CTA */}
       <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden" style={{
-        background: 'linear-gradient(135deg, #8ECAFE 0%, #FDB932 50%, #DB3B3B 100%)'
+        background: 'linear-gradient(135deg, var(--color-sky-blue) 0%, var(--color-amber) 50%, var(--color-remigo-red) 100%)'
       }}>
         {/* Abstract Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: '#392326', opacity: 0.15 }}></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: '#F8F8F8', opacity: 0.2 }}></div>
-          <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: '#DB3B3B', opacity: 0.1 }}></div>
+          <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-burgundy)', opacity: 0.15 }}></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-brand-white)', opacity: 0.2 }}></div>
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-remigo-red)', opacity: 0.1 }}></div>
         </div>
 
         {/* Decorative Pattern */}
@@ -277,10 +277,10 @@ export function AdLandingPage({
         }}></div>
 
         <div className="relative max-w-[900px] mx-auto px-6 md:px-12 text-center">
-          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ color: '#0C0C0C' }}>
+          <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ color: 'var(--color-brand-black)' }}>
             Ready to get started?
           </h2>
-          <p className="font-hanken text-lg md:text-xl mb-8 leading-relaxed" style={{ color: '#0C0C0C', opacity: 0.85 }}>
+          <p className="font-hanken text-lg md:text-xl mb-8 leading-relaxed" style={{ color: 'var(--color-brand-black)', opacity: 0.85 }}>
             Get your free mortgage quote in 60 seconds. Compare deals from 90+ lenders.
           </p>
           <div className="mb-4">
@@ -293,7 +293,7 @@ export function AdLandingPage({
               Get your free quote →
             </Button>
           </div>
-          <p className="font-hanken text-sm" style={{ color: '#0C0C0C', opacity: 0.7 }}>
+          <p className="font-hanken text-sm" style={{ color: 'var(--color-brand-black)', opacity: 0.7 }}>
             FCA regulated · £0 fees · We'll call within the hour
           </p>
         </div>

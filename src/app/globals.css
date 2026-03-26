@@ -2,12 +2,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-remigo-red: #DB3B3B;
+  /* Primary Palette */
+  --color-remigo-red: #C62828;
+  --color-remigo-red-dark: #B71C1C;
   --color-brand-black: #0C0C0C;
   --color-brand-white: #F8F8F8;
+
+  /* Secondary Palette */
   --color-sky-blue: #8ECAFE;
   --color-amber: #FDB932;
-  --color-burgundy: #392326;
+  --color-burgundy: #2C1F21;
+
+  /* Utility Colors */
+  --color-success: #4CAF50;
+  --color-success-light: #22c55e;
+  --color-gray-50: #faf5f5;
+  --color-gray-100: #f5f5f5;
+  --color-gray-300: #d1d5db;
+  --color-dark-bg: #050505;
+  --color-dark-light: #1a1a1a;
 
   --font-family-trocchi: 'Trocchi', serif;
   --font-family-hanken: 'Hanken Grotesk', sans-serif;

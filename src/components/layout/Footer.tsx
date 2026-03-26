@@ -38,10 +38,10 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-brand-black mx-3 mb-3 rounded-3xl overflow-hidden pt-16 md:pt-20">
       {/* Abstract Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: '#DB3B3B', opacity: 0.08 }}></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: '#8ECAFE', opacity: 0.06 }}></div>
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: '#FDB932', opacity: 0.05 }}></div>
-        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: '#392326', opacity: 0.1 }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-remigo-red)', opacity: 0.08 }}></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-sky-blue)', opacity: 0.06 }}></div>
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-amber)', opacity: 0.05 }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-burgundy)', opacity: 0.1 }}></div>
       </div>
 
       {/* Decorative Pattern */}

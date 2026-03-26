@@ -115,9 +115,9 @@ export function WhyUsSection() {
           </div>
 
           {/* Right - Remigo */}
-          <div className="bg-linear-to-br from-[#4CAF50]/10 to-[#4CAF50]/20 rounded-3xl p-10 md:p-12 border-2 border-[#4CAF50]/30">
+          <div className="bg-linear-to-br from-success/10 to-success/20 rounded-3xl p-10 md:p-12 border-2 border-success/30">
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-14 h-14 rounded-full bg-[#4CAF50] flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-success flex items-center justify-center">
                 <svg className="w-8 h-8 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
@@ -133,7 +133,7 @@ export function WhyUsSection() {
 
             <div className="space-y-5">
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -144,7 +144,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -155,7 +155,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -166,7 +166,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -177,7 +177,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -188,7 +188,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-brand-white">
-                <div className="w-8 h-8 rounded-full bg-[#4CAF50] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-5 h-5 text-brand-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>

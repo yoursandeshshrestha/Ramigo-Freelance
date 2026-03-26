@@ -15,8 +15,8 @@ export const Section: React.FC<SectionProps> = ({
 }) => {
   const backgroundStyles = {
     dark: 'bg-brand-black',
-    darker: 'bg-[#050505]',
-    light: 'bg-[#1a1a1a]',
+    darker: 'bg-dark-bg',
+    light: 'bg-dark-light',
   };
 
   return (

@@ -246,9 +246,9 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
       <div className="relative w-full max-w-2xl bg-brand-white rounded-3xl shadow-2xl overflow-hidden">
         {/* Abstract Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: '#DB3B3B', opacity: 0.06 }}></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: '#8ECAFE', opacity: 0.08 }}></div>
-          <div className="absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl" style={{ backgroundColor: '#FDB932', opacity: 0.04 }}></div>
+          <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-remigo-red)', opacity: 0.06 }}></div>
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-sky-blue)', opacity: 0.08 }}></div>
+          <div className="absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl" style={{ backgroundColor: 'var(--color-amber)', opacity: 0.04 }}></div>
         </div>
 
         {/* Decorative Pattern */}
@@ -278,7 +278,7 @@ export const MultiStepFormModal: React.FC<MultiStepFormModalProps> = ({
         {/* Progress Bar */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gray-200/50">
           <div
-            className="h-full bg-gradient-to-r from-remigo-red via-[#FDB932] to-[#8ECAFE] transition-all duration-500"
+            className="h-full bg-gradient-to-r from-remigo-red via-[var(--color-amber)] to-[var(--color-sky-blue)] transition-all duration-500"
             style={{ width: `${(currentStep / totalSteps) * 100}%` }}
           />
         </div>

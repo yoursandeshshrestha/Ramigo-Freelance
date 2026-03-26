@@ -44,7 +44,7 @@ export const HowItWorksSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-trocchi text-4xl md:text-5xl lg:text-6xl text-brand-black mb-6">
-            How it <span className="text-[#d93b3b]">works</span>
+            How it <span className="text-remigo-red">works</span>
           </h2>
           <p className="font-hanken text-lg md:text-xl text-brand-black/70 max-w-2xl mx-auto leading-relaxed">
             Getting the right mortgage shouldn't be complicated. Here's how we make it simple.
