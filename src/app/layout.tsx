@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { FormModalProvider } from "@/components/FormModalProvider";
 import { CookieConsent } from "@/components/CookieConsent";
 
@@ -40,9 +38,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <FormModalProvider>
-          <Header />
           {children}
-          <Footer />
           <CookieConsent />
         </FormModalProvider>
       </body>
