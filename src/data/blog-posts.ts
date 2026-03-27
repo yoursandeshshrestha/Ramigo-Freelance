@@ -9,7 +9,7 @@ export const blogPosts: BlogPost[] = [
     author: 'Remigo Team',
     date: '2026-03-15',
     readTime: '5 min read',
-    featuredImage: '/blog/1.jpg',
+    featuredImage: '/images/blog/remortgage-process-explained.jpg',
     tags: ['remortgage', 'timing', 'advice'],
     content: `
 ## Why Timing Matters
@@ -45,7 +45,7 @@ Not sure when your deal ends? We can check for you and find the best remortgage 
     author: 'Remigo Team',
     date: '2026-03-10',
     readTime: '7 min read',
-    featuredImage: '/blog/2.jpg',
+    featuredImage: '/images/blog/first-time-buyer-checklist.jpg',
     tags: ['first-time buyer', 'deposit', 'savings'],
     content: `
 ## The Deposit Question
@@ -92,7 +92,7 @@ Once you've got your deposit saved, we can help you find the right mortgage. Our
     author: 'Remigo Team',
     date: '2026-03-05',
     readTime: '6 min read',
-    featuredImage: '/blog/3.jpg',
+    featuredImage: '/images/blog/self-employed-mortgage-tips.jpg',
     tags: ['self-employed', 'documents', 'contractors'],
     content: `
 ## The Self-Employed Mortgage Process
@@ -158,7 +158,7 @@ We work with lenders who understand self-employed income. Whether you're a freel
     author: 'Remigo Team',
     date: '2026-02-28',
     readTime: '5 min read',
-    featuredImage: '/blog/4.jpg',
+    featuredImage: '/images/blog/protection-insurance-guide.jpg',
     tags: ['protection', 'life insurance', 'critical illness'],
     content: `
 ## Two Different Types of Protection
@@ -243,7 +243,7 @@ Every situation is different. We can review your circumstances and find protecti
     author: 'Remigo Team',
     date: '2026-02-20',
     readTime: '4 min read',
-    featuredImage: '/blog/5.jpg',
+    featuredImage: '/images/blog/mortgage-basics-guide.jpg',
     tags: ['mortgage', 'agreement in principle', 'house buying'],
     content: `
 ## What is an Agreement in Principle?
@@ -316,7 +316,7 @@ No cost, no obligation - just a clear answer on how much you can borrow.
     author: 'Remigo Team',
     date: '2026-03-01',
     readTime: '5 min read',
-    featuredImage: '/blog/6.jpg',
+    featuredImage: '/images/blog/property-buying-journey.jpg',
     tags: ['remortgage', 'early repayment charge', 'fees'],
     content: `
 ## What Are Early Repayment Charges?
@@ -356,7 +356,7 @@ Sometimes, yes. If interest rates have dropped significantly since you took out 
     author: 'Remigo Team',
     date: '2026-02-25',
     readTime: '6 min read',
-    featuredImage: '/blog/7.jpg',
+    featuredImage: '/images/blog/mortgage-rates-comparison.jpg',
     tags: ['first-time buyer', 'mortgage types', 'fixed rate'],
     content: `
 ## Choosing Your First Mortgage Type
